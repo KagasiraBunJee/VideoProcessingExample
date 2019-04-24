@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		852BC1F72270E23F004EEFA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC1F62270E23F004EEFA8 /* AppDelegate.swift */; };
+		852BC1F92270E23F004EEFA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC1F82270E23F004EEFA8 /* ViewController.swift */; };
+		852BC1FC2270E23F004EEFA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852BC1FA2270E23F004EEFA8 /* Main.storyboard */; };
+		852BC1FE2270E23F004EEFA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852BC1FD2270E23F004EEFA8 /* Assets.xcassets */; };
+		852BC2012270E23F004EEFA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852BC1FF2270E23F004EEFA8 /* LaunchScreen.storyboard */; };
+		852BC20C2270E23F004EEFA8 /* VideoReadEditWriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC20B2270E23F004EEFA8 /* VideoReadEditWriteTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		852BC2082270E23F004EEFA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 852BC1EB2270E23F004EEFA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 852BC1F22270E23F004EEFA8;
+			remoteInfo = VideoReadEditWrite;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		852BC1F32270E23F004EEFA8 /* VideoReadEditWrite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoReadEditWrite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		852BC1F62270E23F004EEFA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		852BC1F82270E23F004EEFA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		852BC1FB2270E23F004EEFA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		852BC1FD2270E23F004EEFA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		852BC2002270E23F004EEFA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		852BC2022270E23F004EEFA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		852BC2072270E23F004EEFA8 /* VideoReadEditWriteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoReadEditWriteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		852BC20B2270E23F004EEFA8 /* VideoReadEditWriteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReadEditWriteTests.swift; sourceTree = "<group>"; };
+		852BC20D2270E23F004EEFA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		852BC1F02270E23F004EEFA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		852BC2042270E23F004EEFA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		852BC1EA2270E23F004EEFA8 = {
+			isa = PBXGroup;
+			children = (
+				852BC1F52270E23F004EEFA8 /* VideoReadEditWrite */,
+				852BC20A2270E23F004EEFA8 /* VideoReadEditWriteTests */,
+				852BC1F42270E23F004EEFA8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		852BC1F42270E23F004EEFA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				852BC1F32270E23F004EEFA8 /* VideoReadEditWrite.app */,
+				852BC2072270E23F004EEFA8 /* VideoReadEditWriteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		852BC1F52270E23F004EEFA8 /* VideoReadEditWrite */ = {
+			isa = PBXGroup;
+			children = (
+				852BC1F62270E23F004EEFA8 /* AppDelegate.swift */,
+				852BC1F82270E23F004EEFA8 /* ViewController.swift */,
+				852BC1FA2270E23F004EEFA8 /* Main.storyboard */,
+				852BC1FD2270E23F004EEFA8 /* Assets.xcassets */,
+				852BC1FF2270E23F004EEFA8 /* LaunchScreen.storyboard */,
+				852BC2022270E23F004EEFA8 /* Info.plist */,
+			);
+			path = VideoReadEditWrite;
+			sourceTree = "<group>";
+		};
+		852BC20A2270E23F004EEFA8 /* VideoReadEditWriteTests */ = {
+			isa = PBXGroup;
+			children = (
+				852BC20B2270E23F004EEFA8 /* VideoReadEditWriteTests.swift */,
+				852BC20D2270E23F004EEFA8 /* Info.plist */,
+			);
+			path = VideoReadEditWriteTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		852BC1F22270E23F004EEFA8 /* VideoReadEditWrite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 852BC2102270E23F004EEFA8 /* Build configuration list for PBXNativeTarget "VideoReadEditWrite" */;
+			buildPhases = (
+				852BC1EF2270E23F004EEFA8 /* Sources */,
+				852BC1F02270E23F004EEFA8 /* Frameworks */,
+				852BC1F12270E23F004EEFA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VideoReadEditWrite;
+			productName = VideoReadEditWrite;
+			productReference = 852BC1F32270E23F004EEFA8 /* VideoReadEditWrite.app */;
+			productType = "com.apple.product-type.application";
+		};
+		852BC2062270E23F004EEFA8 /* VideoReadEditWriteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 852BC2132270E23F004EEFA8 /* Build configuration list for PBXNativeTarget "VideoReadEditWriteTests" */;
+			buildPhases = (
+				852BC2032270E23F004EEFA8 /* Sources */,
+				852BC2042270E23F004EEFA8 /* Frameworks */,
+				852BC2052270E23F004EEFA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				852BC2092270E23F004EEFA8 /* PBXTargetDependency */,
+			);
+			name = VideoReadEditWriteTests;
+			productName = VideoReadEditWriteTests;
+			productReference = 852BC2072270E23F004EEFA8 /* VideoReadEditWriteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		852BC1EB2270E23F004EEFA8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Sergei;
+				TargetAttributes = {
+					852BC1F22270E23F004EEFA8 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					852BC2062270E23F004EEFA8 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 852BC1F22270E23F004EEFA8;
+					};
+				};
+			};
+			buildConfigurationList = 852BC1EE2270E23F004EEFA8 /* Build configuration list for PBXProject "VideoReadEditWrite" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 852BC1EA2270E23F004EEFA8;
+			productRefGroup = 852BC1F42270E23F004EEFA8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				852BC1F22270E23F004EEFA8 /* VideoReadEditWrite */,
+				852BC2062270E23F004EEFA8 /* VideoReadEditWriteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		852BC1F12270E23F004EEFA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				852BC2012270E23F004EEFA8 /* LaunchScreen.storyboard in Resources */,
+				852BC1FE2270E23F004EEFA8 /* Assets.xcassets in Resources */,
+				852BC1FC2270E23F004EEFA8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		852BC2052270E23F004EEFA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		852BC1EF2270E23F004EEFA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				852BC1F92270E23F004EEFA8 /* ViewController.swift in Sources */,
+				852BC1F72270E23F004EEFA8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		852BC2032270E23F004EEFA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				852BC20C2270E23F004EEFA8 /* VideoReadEditWriteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		852BC2092270E23F004EEFA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 852BC1F22270E23F004EEFA8 /* VideoReadEditWrite */;
+			targetProxy = 852BC2082270E23F004EEFA8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		852BC1FA2270E23F004EEFA8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				852BC1FB2270E23F004EEFA8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		852BC1FF2270E23F004EEFA8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				852BC2002270E23F004EEFA8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		852BC20E2270E23F004EEFA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		852BC20F2270E23F004EEFA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		852BC2112270E23F004EEFA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AGHA3VWM5L;
+				INFOPLIST_FILE = VideoReadEditWrite/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.historic.VideoReadEditWrite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		852BC2122270E23F004EEFA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AGHA3VWM5L;
+				INFOPLIST_FILE = VideoReadEditWrite/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.historic.VideoReadEditWrite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		852BC2142270E23F004EEFA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AGHA3VWM5L;
+				INFOPLIST_FILE = VideoReadEditWriteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.historic.VideoReadEditWriteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoReadEditWrite.app/VideoReadEditWrite";
+			};
+			name = Debug;
+		};
+		852BC2152270E23F004EEFA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AGHA3VWM5L;
+				INFOPLIST_FILE = VideoReadEditWriteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.historic.VideoReadEditWriteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoReadEditWrite.app/VideoReadEditWrite";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		852BC1EE2270E23F004EEFA8 /* Build configuration list for PBXProject "VideoReadEditWrite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				852BC20E2270E23F004EEFA8 /* Debug */,
+				852BC20F2270E23F004EEFA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		852BC2102270E23F004EEFA8 /* Build configuration list for PBXNativeTarget "VideoReadEditWrite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				852BC2112270E23F004EEFA8 /* Debug */,
+				852BC2122270E23F004EEFA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		852BC2132270E23F004EEFA8 /* Build configuration list for PBXNativeTarget "VideoReadEditWriteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				852BC2142270E23F004EEFA8 /* Debug */,
+				852BC2152270E23F004EEFA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 852BC1EB2270E23F004EEFA8 /* Project object */;
+}
