@@ -19,9 +19,6 @@ protocol VideoProcessingDelegate: class {
 }
 
 class VideoProcessing: NSObject {
-
-//    private var renderManager: MTFilterManager?
-//    private var filter: MTFilter?
     
     //reader
     private var assetReader: AVAssetReader?
@@ -54,7 +51,6 @@ class VideoProcessing: NSObject {
     weak var delegate: VideoProcessingDelegate?
     
     override init() {
-//        renderManager = MTFilterManager()
         super.init()
     }
     
@@ -73,10 +69,6 @@ class VideoProcessing: NSObject {
         self.outputUrl = outputUrl
         prepareReader()
         prepareWriter()
-    }
-    
-    func applyFilter(filter: MTFilter.Type) {
-//        self.filter = filter.init(manager: renderManager!)
     }
     
     func start() {
