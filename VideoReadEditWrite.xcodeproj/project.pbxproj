@@ -7,12 +7,116 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B7873392EBBE95B87629F09 /* Pods_VideoReadEditWriteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A4EAFC4F2ACC16F05230FA /* Pods_VideoReadEditWriteTests.framework */; };
+		651B8F5819C394D54D7985F0 /* Pods_VideoReadEditWrite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140A352A882748868D03622F /* Pods_VideoReadEditWrite.framework */; };
 		852BC1F72270E23F004EEFA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC1F62270E23F004EEFA8 /* AppDelegate.swift */; };
 		852BC1F92270E23F004EEFA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC1F82270E23F004EEFA8 /* ViewController.swift */; };
 		852BC1FC2270E23F004EEFA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852BC1FA2270E23F004EEFA8 /* Main.storyboard */; };
 		852BC1FE2270E23F004EEFA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852BC1FD2270E23F004EEFA8 /* Assets.xcassets */; };
 		852BC2012270E23F004EEFA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852BC1FF2270E23F004EEFA8 /* LaunchScreen.storyboard */; };
 		852BC20C2270E23F004EEFA8 /* VideoReadEditWriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC20B2270E23F004EEFA8 /* VideoReadEditWriteTests.swift */; };
+		852BC2282270E331004EEFA8 /* MTFilterGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2182270E331004EEFA8 /* MTFilterGroup.swift */; };
+		852BC2292270E331004EEFA8 /* MTAntiLuxFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2192270E331004EEFA8 /* MTAntiLuxFilter.swift */; };
+		852BC22A2270E331004EEFA8 /* MTLocalLaplacianFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC21A2270E331004EEFA8 /* MTLocalLaplacianFilter.metal */; };
+		852BC22B2270E331004EEFA8 /* MTImageOverlayFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC21B2270E331004EEFA8 /* MTImageOverlayFilter.swift */; };
+		852BC22C2270E331004EEFA8 /* MTFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC21C2270E331004EEFA8 /* MTFilter.swift */; };
+		852BC22D2270E331004EEFA8 /* MTFilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC21D2270E331004EEFA8 /* MTFilterManager.swift */; };
+		852BC22E2270E331004EEFA8 /* MTTintColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC21E2270E331004EEFA8 /* MTTintColor.swift */; };
+		852BC22F2270E331004EEFA8 /* MTLuxBlendFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC21F2270E331004EEFA8 /* MTLuxBlendFilter.swift */; };
+		852BC2302270E331004EEFA8 /* MTBasicAdjustFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2202270E331004EEFA8 /* MTBasicAdjustFilter.metal */; };
+		852BC2312270E331004EEFA8 /* MTStarlightFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2212270E331004EEFA8 /* MTStarlightFilter.metal */; };
+		852BC2322270E331004EEFA8 /* MTAntiLuxFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2222270E331004EEFA8 /* MTAntiLuxFilter.metal */; };
+		852BC2332270E331004EEFA8 /* MTImageOverlayFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2232270E331004EEFA8 /* MTImageOverlayFilter.metal */; };
+		852BC2342270E331004EEFA8 /* MTLocalLaplacianFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2242270E331004EEFA8 /* MTLocalLaplacianFilter.swift */; };
+		852BC2352270E331004EEFA8 /* MTStarlightFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2252270E331004EEFA8 /* MTStarlightFilter.swift */; };
+		852BC2362270E331004EEFA8 /* MTLuxBlendFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2262270E331004EEFA8 /* MTLuxBlendFilter.metal */; };
+		852BC2372270E331004EEFA8 /* MTBasicAdjustFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2272270E331004EEFA8 /* MTBasicAdjustFilter.swift */; };
+		852BC28D2270E352004EEFA8 /* FilterAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 852BC2382270E351004EEFA8 /* FilterAssets.bundle */; };
+		852BC28E2270E352004EEFA8 /* MTInkwellFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC23A2270E351004EEFA8 /* MTInkwellFilter.swift */; };
+		852BC28F2270E352004EEFA8 /* MTCremaFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC23B2270E351004EEFA8 /* MTCremaFilter.metal */; };
+		852BC2902270E352004EEFA8 /* MTJunoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC23C2270E351004EEFA8 /* MTJunoFilter.metal */; };
+		852BC2912270E352004EEFA8 /* MTEarlybirdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC23D2270E351004EEFA8 /* MTEarlybirdFilter.swift */; };
+		852BC2922270E352004EEFA8 /* MTSutroFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC23E2270E351004EEFA8 /* MTSutroFilter.metal */; };
+		852BC2932270E352004EEFA8 /* MTHelenaVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC23F2270E351004EEFA8 /* MTHelenaVideoFilter.metal */; };
+		852BC2942270E352004EEFA8 /* MTMavenVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2402270E351004EEFA8 /* MTMavenVideoFilter.swift */; };
+		852BC2952270E352004EEFA8 /* MTGinzaVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2412270E351004EEFA8 /* MTGinzaVideoFilter.metal */; };
+		852BC2962270E352004EEFA8 /* MTClarendonVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2422270E351004EEFA8 /* MTClarendonVideoFilter.metal */; };
+		852BC2972270E352004EEFA8 /* MTLarkFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2432270E351004EEFA8 /* MTLarkFilter.swift */; };
+		852BC2982270E352004EEFA8 /* MTAmaroFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2442270E351004EEFA8 /* MTAmaroFilter.swift */; };
+		852BC2992270E352004EEFA8 /* MTStinsonVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2452270E351004EEFA8 /* MTStinsonVideoFilter.metal */; };
+		852BC29A2270E352004EEFA8 /* MTGinghamVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2462270E351004EEFA8 /* MTGinghamVideoFilter.swift */; };
+		852BC29B2270E352004EEFA8 /* MTToasterFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2472270E351004EEFA8 /* MTToasterFilter.metal */; };
+		852BC29C2270E352004EEFA8 /* MTPerpetuaFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2482270E351004EEFA8 /* MTPerpetuaFilter.swift */; };
+		852BC29D2270E352004EEFA8 /* MTVesperVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2492270E351004EEFA8 /* MTVesperVideoFilter.metal */; };
+		852BC29E2270E352004EEFA8 /* MTBrooklynVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC24A2270E351004EEFA8 /* MTBrooklynVideoFilter.swift */; };
+		852BC29F2270E352004EEFA8 /* MTBrannanFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC24B2270E351004EEFA8 /* MTBrannanFilter.swift */; };
+		852BC2A02270E352004EEFA8 /* MTSkylineVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC24C2270E351004EEFA8 /* MTSkylineVideoFilter.metal */; };
+		852BC2A12270E352004EEFA8 /* MTCharmesVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC24D2270E351004EEFA8 /* MTCharmesVideoFilter.metal */; };
+		852BC2A22270E352004EEFA8 /* MTAdenFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC24E2270E351004EEFA8 /* MTAdenFilter.swift */; };
+		852BC2A32270E352004EEFA8 /* MTSierraFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC24F2270E351004EEFA8 /* MTSierraFilter.swift */; };
+		852BC2A42270E352004EEFA8 /* MTDogpatchVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2512270E351004EEFA8 /* MTDogpatchVideoFilter.swift */; };
+		852BC2A52270E352004EEFA8 /* MTHudsonFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2522270E351004EEFA8 /* MTHudsonFilter.swift */; };
+		852BC2A62270E352004EEFA8 /* MTLudwigFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2532270E351004EEFA8 /* MTLudwigFilter.swift */; };
+		852BC2A72270E352004EEFA8 /* MTAshbyVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2542270E351004EEFA8 /* MTAshbyVideoFilter.metal */; };
+		852BC2A82270E352004EEFA8 /* MTWillowFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2552270E351004EEFA8 /* MTWillowFilter.swift */; };
+		852BC2A92270E352004EEFA8 /* MTKelvinFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2562270E351004EEFA8 /* MTKelvinFilter.metal */; };
+		852BC2AA2270E352004EEFA8 /* MTMoonVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2572270E351004EEFA8 /* MTMoonVideoFilter.metal */; };
+		852BC2AB2270E352004EEFA8 /* MTSlumberFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2582270E351004EEFA8 /* MTSlumberFilter.metal */; };
+		852BC2AC2270E352004EEFA8 /* MTValenciaFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2592270E351004EEFA8 /* MTValenciaFilter.swift */; };
+		852BC2AD2270E352004EEFA8 /* MT1977Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC25A2270E351004EEFA8 /* MT1977Filter.swift */; };
+		852BC2AE2270E352004EEFA8 /* MTWaldenFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC25B2270E351004EEFA8 /* MTWaldenFilter.metal */; };
+		852BC2AF2270E352004EEFA8 /* MTNormalFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC25C2270E351004EEFA8 /* MTNormalFilter.metal */; };
+		852BC2B02270E352004EEFA8 /* MTXpro2Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC25D2270E351004EEFA8 /* MTXpro2Filter.swift */; };
+		852BC2B12270E352004EEFA8 /* MTRiseFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC25E2270E351004EEFA8 /* MTRiseFilter.metal */; };
+		852BC2B22270E352004EEFA8 /* MTNashvilleFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC25F2270E351004EEFA8 /* MTNashvilleFilter.swift */; };
+		852BC2B32270E352004EEFA8 /* MTHefeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2602270E351004EEFA8 /* MTHefeFilter.metal */; };
+		852BC2B42270E352004EEFA8 /* MTLoFiFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2612270E351004EEFA8 /* MTLoFiFilter.metal */; };
+		852BC2B52270E352004EEFA8 /* MTReyesFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2622270E351004EEFA8 /* MTReyesFilter.metal */; };
+		852BC2B62270E352004EEFA8 /* MTMayfairFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2632270E351004EEFA8 /* MTMayfairFilter.metal */; };
+		852BC2B72270E352004EEFA8 /* MTLarkFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2642270E351004EEFA8 /* MTLarkFilter.metal */; };
+		852BC2B82270E352004EEFA8 /* MTAmaroFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2652270E351004EEFA8 /* MTAmaroFilter.metal */; };
+		852BC2B92270E352004EEFA8 /* MTStinsonVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2662270E351004EEFA8 /* MTStinsonVideoFilter.swift */; };
+		852BC2BA2270E352004EEFA8 /* MTGinghamVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2672270E351004EEFA8 /* MTGinghamVideoFilter.metal */; };
+		852BC2BB2270E352004EEFA8 /* MTToasterFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2682270E351004EEFA8 /* MTToasterFilter.swift */; };
+		852BC2BC2270E352004EEFA8 /* MTPerpetuaFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2692270E351004EEFA8 /* MTPerpetuaFilter.metal */; };
+		852BC2BD2270E352004EEFA8 /* MTVesperVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC26A2270E351004EEFA8 /* MTVesperVideoFilter.swift */; };
+		852BC2BE2270E352004EEFA8 /* MTClarendonVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC26B2270E351004EEFA8 /* MTClarendonVideoFilter.swift */; };
+		852BC2BF2270E352004EEFA8 /* MTJunoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC26C2270E351004EEFA8 /* MTJunoFilter.swift */; };
+		852BC2C02270E352004EEFA8 /* MTEarlybirdFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC26D2270E351004EEFA8 /* MTEarlybirdFilter.metal */; };
+		852BC2C12270E352004EEFA8 /* MTSutroFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC26E2270E351004EEFA8 /* MTSutroFilter.swift */; };
+		852BC2C22270E352004EEFA8 /* MTHelenaVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC26F2270E351004EEFA8 /* MTHelenaVideoFilter.swift */; };
+		852BC2C32270E352004EEFA8 /* MTMavenVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2702270E351004EEFA8 /* MTMavenVideoFilter.metal */; };
+		852BC2C42270E352004EEFA8 /* MTGinzaVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2712270E351004EEFA8 /* MTGinzaVideoFilter.swift */; };
+		852BC2C52270E352004EEFA8 /* MTInkwellFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2722270E351004EEFA8 /* MTInkwellFilter.metal */; };
+		852BC2C62270E352004EEFA8 /* MTCremaFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2732270E351004EEFA8 /* MTCremaFilter.swift */; };
+		852BC2C72270E352004EEFA8 /* MTLudwigFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2742270E351004EEFA8 /* MTLudwigFilter.metal */; };
+		852BC2C82270E352004EEFA8 /* MTDogpatchVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2752270E351004EEFA8 /* MTDogpatchVideoFilter.metal */; };
+		852BC2C92270E352004EEFA8 /* MTHudsonFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2762270E351004EEFA8 /* MTHudsonFilter.metal */; };
+		852BC2CA2270E352004EEFA8 /* MTBrannanFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2772270E351004EEFA8 /* MTBrannanFilter.metal */; };
+		852BC2CB2270E352004EEFA8 /* MTCharmesVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2782270E351004EEFA8 /* MTCharmesVideoFilter.swift */; };
+		852BC2CC2270E352004EEFA8 /* MTSkylineVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2792270E351004EEFA8 /* MTSkylineVideoFilter.swift */; };
+		852BC2CD2270E352004EEFA8 /* MTAdenFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC27A2270E351004EEFA8 /* MTAdenFilter.metal */; };
+		852BC2CE2270E352004EEFA8 /* MTSierraFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC27B2270E351004EEFA8 /* MTSierraFilter.metal */; };
+		852BC2CF2270E352004EEFA8 /* MTBrooklynVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC27C2270E351004EEFA8 /* MTBrooklynVideoFilter.metal */; };
+		852BC2D02270E352004EEFA8 /* MT1977Filter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC27D2270E351004EEFA8 /* MT1977Filter.metal */; };
+		852BC2D12270E352004EEFA8 /* MTSlumberFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC27E2270E351004EEFA8 /* MTSlumberFilter.swift */; };
+		852BC2D22270E352004EEFA8 /* MTValenciaFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC27F2270E351004EEFA8 /* MTValenciaFilter.metal */; };
+		852BC2D32270E352004EEFA8 /* MTAshbyVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2802270E351004EEFA8 /* MTAshbyVideoFilter.swift */; };
+		852BC2D42270E352004EEFA8 /* MTWillowFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2812270E351004EEFA8 /* MTWillowFilter.metal */; };
+		852BC2D52270E352004EEFA8 /* MTKelvinFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2822270E351004EEFA8 /* MTKelvinFilter.swift */; };
+		852BC2D62270E352004EEFA8 /* MTMoonVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2832270E351004EEFA8 /* MTMoonVideoFilter.swift */; };
+		852BC2D72270E352004EEFA8 /* MTReyesFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2842270E351004EEFA8 /* MTReyesFilter.swift */; };
+		852BC2D82270E352004EEFA8 /* MTMayfairFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2852270E351004EEFA8 /* MTMayfairFilter.swift */; };
+		852BC2D92270E352004EEFA8 /* MTHefeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2862270E351004EEFA8 /* MTHefeFilter.swift */; };
+		852BC2DA2270E352004EEFA8 /* MTLoFiFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2872270E351004EEFA8 /* MTLoFiFilter.swift */; };
+		852BC2DB2270E352004EEFA8 /* MTNashvilleFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2882270E351004EEFA8 /* MTNashvilleFilter.metal */; };
+		852BC2DC2270E352004EEFA8 /* MTWaldenFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2892270E351004EEFA8 /* MTWaldenFilter.swift */; };
+		852BC2DD2270E352004EEFA8 /* MTNormalFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC28A2270E351004EEFA8 /* MTNormalFilter.swift */; };
+		852BC2DE2270E352004EEFA8 /* MTXpro2Filter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC28B2270E351004EEFA8 /* MTXpro2Filter.metal */; };
+		852BC2DF2270E352004EEFA8 /* MTRiseFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC28C2270E351004EEFA8 /* MTRiseFilter.swift */; };
+		852BC2E22270E55D004EEFA8 /* VideoProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2E12270E55D004EEFA8 /* VideoProcessing.swift */; };
+		852BC2E42270F548004EEFA8 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2E32270F548004EEFA8 /* FileHelper.swift */; };
+		852BC2EA22710D3D004EEFA8 /* ObjCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2E922710D3D004EEFA8 /* ObjCHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +130,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		140A352A882748868D03622F /* Pods_VideoReadEditWrite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoReadEditWrite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A68FB8C88BF71E856B32DF1 /* Pods-VideoReadEditWrite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoReadEditWrite.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoReadEditWrite/Pods-VideoReadEditWrite.release.xcconfig"; sourceTree = "<group>"; };
 		852BC1F32270E23F004EEFA8 /* VideoReadEditWrite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoReadEditWrite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		852BC1F62270E23F004EEFA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		852BC1F82270E23F004EEFA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +142,115 @@
 		852BC2072270E23F004EEFA8 /* VideoReadEditWriteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoReadEditWriteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		852BC20B2270E23F004EEFA8 /* VideoReadEditWriteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReadEditWriteTests.swift; sourceTree = "<group>"; };
 		852BC20D2270E23F004EEFA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		852BC2182270E331004EEFA8 /* MTFilterGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTFilterGroup.swift; sourceTree = "<group>"; };
+		852BC2192270E331004EEFA8 /* MTAntiLuxFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTAntiLuxFilter.swift; sourceTree = "<group>"; };
+		852BC21A2270E331004EEFA8 /* MTLocalLaplacianFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTLocalLaplacianFilter.metal; sourceTree = "<group>"; };
+		852BC21B2270E331004EEFA8 /* MTImageOverlayFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTImageOverlayFilter.swift; sourceTree = "<group>"; };
+		852BC21C2270E331004EEFA8 /* MTFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTFilter.swift; sourceTree = "<group>"; };
+		852BC21D2270E331004EEFA8 /* MTFilterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTFilterManager.swift; sourceTree = "<group>"; };
+		852BC21E2270E331004EEFA8 /* MTTintColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTTintColor.swift; sourceTree = "<group>"; };
+		852BC21F2270E331004EEFA8 /* MTLuxBlendFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTLuxBlendFilter.swift; sourceTree = "<group>"; };
+		852BC2202270E331004EEFA8 /* MTBasicAdjustFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTBasicAdjustFilter.metal; sourceTree = "<group>"; };
+		852BC2212270E331004EEFA8 /* MTStarlightFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTStarlightFilter.metal; sourceTree = "<group>"; };
+		852BC2222270E331004EEFA8 /* MTAntiLuxFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTAntiLuxFilter.metal; sourceTree = "<group>"; };
+		852BC2232270E331004EEFA8 /* MTImageOverlayFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTImageOverlayFilter.metal; sourceTree = "<group>"; };
+		852BC2242270E331004EEFA8 /* MTLocalLaplacianFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTLocalLaplacianFilter.swift; sourceTree = "<group>"; };
+		852BC2252270E331004EEFA8 /* MTStarlightFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTStarlightFilter.swift; sourceTree = "<group>"; };
+		852BC2262270E331004EEFA8 /* MTLuxBlendFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTLuxBlendFilter.metal; sourceTree = "<group>"; };
+		852BC2272270E331004EEFA8 /* MTBasicAdjustFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTBasicAdjustFilter.swift; sourceTree = "<group>"; };
+		852BC2382270E351004EEFA8 /* FilterAssets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FilterAssets.bundle; sourceTree = "<group>"; };
+		852BC23A2270E351004EEFA8 /* MTInkwellFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTInkwellFilter.swift; sourceTree = "<group>"; };
+		852BC23B2270E351004EEFA8 /* MTCremaFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTCremaFilter.metal; sourceTree = "<group>"; };
+		852BC23C2270E351004EEFA8 /* MTJunoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTJunoFilter.metal; sourceTree = "<group>"; };
+		852BC23D2270E351004EEFA8 /* MTEarlybirdFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTEarlybirdFilter.swift; sourceTree = "<group>"; };
+		852BC23E2270E351004EEFA8 /* MTSutroFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTSutroFilter.metal; sourceTree = "<group>"; };
+		852BC23F2270E351004EEFA8 /* MTHelenaVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTHelenaVideoFilter.metal; sourceTree = "<group>"; };
+		852BC2402270E351004EEFA8 /* MTMavenVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMavenVideoFilter.swift; sourceTree = "<group>"; };
+		852BC2412270E351004EEFA8 /* MTGinzaVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTGinzaVideoFilter.metal; sourceTree = "<group>"; };
+		852BC2422270E351004EEFA8 /* MTClarendonVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTClarendonVideoFilter.metal; sourceTree = "<group>"; };
+		852BC2432270E351004EEFA8 /* MTLarkFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTLarkFilter.swift; sourceTree = "<group>"; };
+		852BC2442270E351004EEFA8 /* MTAmaroFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTAmaroFilter.swift; sourceTree = "<group>"; };
+		852BC2452270E351004EEFA8 /* MTStinsonVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTStinsonVideoFilter.metal; sourceTree = "<group>"; };
+		852BC2462270E351004EEFA8 /* MTGinghamVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTGinghamVideoFilter.swift; sourceTree = "<group>"; };
+		852BC2472270E351004EEFA8 /* MTToasterFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTToasterFilter.metal; sourceTree = "<group>"; };
+		852BC2482270E351004EEFA8 /* MTPerpetuaFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTPerpetuaFilter.swift; sourceTree = "<group>"; };
+		852BC2492270E351004EEFA8 /* MTVesperVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTVesperVideoFilter.metal; sourceTree = "<group>"; };
+		852BC24A2270E351004EEFA8 /* MTBrooklynVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTBrooklynVideoFilter.swift; sourceTree = "<group>"; };
+		852BC24B2270E351004EEFA8 /* MTBrannanFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTBrannanFilter.swift; sourceTree = "<group>"; };
+		852BC24C2270E351004EEFA8 /* MTSkylineVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTSkylineVideoFilter.metal; sourceTree = "<group>"; };
+		852BC24D2270E351004EEFA8 /* MTCharmesVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTCharmesVideoFilter.metal; sourceTree = "<group>"; };
+		852BC24E2270E351004EEFA8 /* MTAdenFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTAdenFilter.swift; sourceTree = "<group>"; };
+		852BC24F2270E351004EEFA8 /* MTSierraFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTSierraFilter.swift; sourceTree = "<group>"; };
+		852BC2502270E351004EEFA8 /* IFShaderLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFShaderLib.h; sourceTree = "<group>"; };
+		852BC2512270E351004EEFA8 /* MTDogpatchVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTDogpatchVideoFilter.swift; sourceTree = "<group>"; };
+		852BC2522270E351004EEFA8 /* MTHudsonFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTHudsonFilter.swift; sourceTree = "<group>"; };
+		852BC2532270E351004EEFA8 /* MTLudwigFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTLudwigFilter.swift; sourceTree = "<group>"; };
+		852BC2542270E351004EEFA8 /* MTAshbyVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTAshbyVideoFilter.metal; sourceTree = "<group>"; };
+		852BC2552270E351004EEFA8 /* MTWillowFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTWillowFilter.swift; sourceTree = "<group>"; };
+		852BC2562270E351004EEFA8 /* MTKelvinFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTKelvinFilter.metal; sourceTree = "<group>"; };
+		852BC2572270E351004EEFA8 /* MTMoonVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTMoonVideoFilter.metal; sourceTree = "<group>"; };
+		852BC2582270E351004EEFA8 /* MTSlumberFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTSlumberFilter.metal; sourceTree = "<group>"; };
+		852BC2592270E351004EEFA8 /* MTValenciaFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTValenciaFilter.swift; sourceTree = "<group>"; };
+		852BC25A2270E351004EEFA8 /* MT1977Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MT1977Filter.swift; sourceTree = "<group>"; };
+		852BC25B2270E351004EEFA8 /* MTWaldenFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTWaldenFilter.metal; sourceTree = "<group>"; };
+		852BC25C2270E351004EEFA8 /* MTNormalFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTNormalFilter.metal; sourceTree = "<group>"; };
+		852BC25D2270E351004EEFA8 /* MTXpro2Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTXpro2Filter.swift; sourceTree = "<group>"; };
+		852BC25E2270E351004EEFA8 /* MTRiseFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTRiseFilter.metal; sourceTree = "<group>"; };
+		852BC25F2270E351004EEFA8 /* MTNashvilleFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTNashvilleFilter.swift; sourceTree = "<group>"; };
+		852BC2602270E351004EEFA8 /* MTHefeFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTHefeFilter.metal; sourceTree = "<group>"; };
+		852BC2612270E351004EEFA8 /* MTLoFiFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTLoFiFilter.metal; sourceTree = "<group>"; };
+		852BC2622270E351004EEFA8 /* MTReyesFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTReyesFilter.metal; sourceTree = "<group>"; };
+		852BC2632270E351004EEFA8 /* MTMayfairFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTMayfairFilter.metal; sourceTree = "<group>"; };
+		852BC2642270E351004EEFA8 /* MTLarkFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTLarkFilter.metal; sourceTree = "<group>"; };
+		852BC2652270E351004EEFA8 /* MTAmaroFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTAmaroFilter.metal; sourceTree = "<group>"; };
+		852BC2662270E351004EEFA8 /* MTStinsonVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTStinsonVideoFilter.swift; sourceTree = "<group>"; };
+		852BC2672270E351004EEFA8 /* MTGinghamVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTGinghamVideoFilter.metal; sourceTree = "<group>"; };
+		852BC2682270E351004EEFA8 /* MTToasterFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTToasterFilter.swift; sourceTree = "<group>"; };
+		852BC2692270E351004EEFA8 /* MTPerpetuaFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTPerpetuaFilter.metal; sourceTree = "<group>"; };
+		852BC26A2270E351004EEFA8 /* MTVesperVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTVesperVideoFilter.swift; sourceTree = "<group>"; };
+		852BC26B2270E351004EEFA8 /* MTClarendonVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTClarendonVideoFilter.swift; sourceTree = "<group>"; };
+		852BC26C2270E351004EEFA8 /* MTJunoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTJunoFilter.swift; sourceTree = "<group>"; };
+		852BC26D2270E351004EEFA8 /* MTEarlybirdFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTEarlybirdFilter.metal; sourceTree = "<group>"; };
+		852BC26E2270E351004EEFA8 /* MTSutroFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTSutroFilter.swift; sourceTree = "<group>"; };
+		852BC26F2270E351004EEFA8 /* MTHelenaVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTHelenaVideoFilter.swift; sourceTree = "<group>"; };
+		852BC2702270E351004EEFA8 /* MTMavenVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTMavenVideoFilter.metal; sourceTree = "<group>"; };
+		852BC2712270E351004EEFA8 /* MTGinzaVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTGinzaVideoFilter.swift; sourceTree = "<group>"; };
+		852BC2722270E351004EEFA8 /* MTInkwellFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTInkwellFilter.metal; sourceTree = "<group>"; };
+		852BC2732270E351004EEFA8 /* MTCremaFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTCremaFilter.swift; sourceTree = "<group>"; };
+		852BC2742270E351004EEFA8 /* MTLudwigFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTLudwigFilter.metal; sourceTree = "<group>"; };
+		852BC2752270E351004EEFA8 /* MTDogpatchVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTDogpatchVideoFilter.metal; sourceTree = "<group>"; };
+		852BC2762270E351004EEFA8 /* MTHudsonFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTHudsonFilter.metal; sourceTree = "<group>"; };
+		852BC2772270E351004EEFA8 /* MTBrannanFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTBrannanFilter.metal; sourceTree = "<group>"; };
+		852BC2782270E351004EEFA8 /* MTCharmesVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTCharmesVideoFilter.swift; sourceTree = "<group>"; };
+		852BC2792270E351004EEFA8 /* MTSkylineVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTSkylineVideoFilter.swift; sourceTree = "<group>"; };
+		852BC27A2270E351004EEFA8 /* MTAdenFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTAdenFilter.metal; sourceTree = "<group>"; };
+		852BC27B2270E351004EEFA8 /* MTSierraFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTSierraFilter.metal; sourceTree = "<group>"; };
+		852BC27C2270E351004EEFA8 /* MTBrooklynVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTBrooklynVideoFilter.metal; sourceTree = "<group>"; };
+		852BC27D2270E351004EEFA8 /* MT1977Filter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MT1977Filter.metal; sourceTree = "<group>"; };
+		852BC27E2270E351004EEFA8 /* MTSlumberFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTSlumberFilter.swift; sourceTree = "<group>"; };
+		852BC27F2270E351004EEFA8 /* MTValenciaFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTValenciaFilter.metal; sourceTree = "<group>"; };
+		852BC2802270E351004EEFA8 /* MTAshbyVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTAshbyVideoFilter.swift; sourceTree = "<group>"; };
+		852BC2812270E351004EEFA8 /* MTWillowFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTWillowFilter.metal; sourceTree = "<group>"; };
+		852BC2822270E351004EEFA8 /* MTKelvinFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTKelvinFilter.swift; sourceTree = "<group>"; };
+		852BC2832270E351004EEFA8 /* MTMoonVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMoonVideoFilter.swift; sourceTree = "<group>"; };
+		852BC2842270E351004EEFA8 /* MTReyesFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTReyesFilter.swift; sourceTree = "<group>"; };
+		852BC2852270E351004EEFA8 /* MTMayfairFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMayfairFilter.swift; sourceTree = "<group>"; };
+		852BC2862270E351004EEFA8 /* MTHefeFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTHefeFilter.swift; sourceTree = "<group>"; };
+		852BC2872270E351004EEFA8 /* MTLoFiFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTLoFiFilter.swift; sourceTree = "<group>"; };
+		852BC2882270E351004EEFA8 /* MTNashvilleFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTNashvilleFilter.metal; sourceTree = "<group>"; };
+		852BC2892270E351004EEFA8 /* MTWaldenFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTWaldenFilter.swift; sourceTree = "<group>"; };
+		852BC28A2270E351004EEFA8 /* MTNormalFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTNormalFilter.swift; sourceTree = "<group>"; };
+		852BC28B2270E351004EEFA8 /* MTXpro2Filter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTXpro2Filter.metal; sourceTree = "<group>"; };
+		852BC28C2270E351004EEFA8 /* MTRiseFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRiseFilter.swift; sourceTree = "<group>"; };
+		852BC2E12270E55D004EEFA8 /* VideoProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoProcessing.swift; sourceTree = "<group>"; };
+		852BC2E32270F548004EEFA8 /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
+		852BC2E522710CDB004EEFA8 /* VideoReadEditWrite-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VideoReadEditWrite-Bridging-Header.h"; sourceTree = "<group>"; };
+		852BC2E822710D3D004EEFA8 /* ObjCHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCHelper.h; sourceTree = "<group>"; };
+		852BC2E922710D3D004EEFA8 /* ObjCHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCHelper.m; sourceTree = "<group>"; };
+		AABE5A87013FD1F95D93D362 /* Pods-VideoReadEditWriteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoReadEditWriteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoReadEditWriteTests/Pods-VideoReadEditWriteTests.release.xcconfig"; sourceTree = "<group>"; };
+		D1A4EAFC4F2ACC16F05230FA /* Pods_VideoReadEditWriteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoReadEditWriteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F48870D1970FB1706D748B21 /* Pods-VideoReadEditWrite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoReadEditWrite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoReadEditWrite/Pods-VideoReadEditWrite.debug.xcconfig"; sourceTree = "<group>"; };
+		FF0824193AD8542C28EAA0DC /* Pods-VideoReadEditWriteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoReadEditWriteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoReadEditWriteTests/Pods-VideoReadEditWriteTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +258,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				651B8F5819C394D54D7985F0 /* Pods_VideoReadEditWrite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +266,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B7873392EBBE95B87629F09 /* Pods_VideoReadEditWriteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7868FC608877B5F749CD4156 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				140A352A882748868D03622F /* Pods_VideoReadEditWrite.framework */,
+				D1A4EAFC4F2ACC16F05230FA /* Pods_VideoReadEditWriteTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		852BC1EA2270E23F004EEFA8 = {
 			isa = PBXGroup;
 			children = (
 				852BC1F52270E23F004EEFA8 /* VideoReadEditWrite */,
 				852BC20A2270E23F004EEFA8 /* VideoReadEditWriteTests */,
 				852BC1F42270E23F004EEFA8 /* Products */,
+				94AF28AB82CAA3115261221A /* Pods */,
+				7868FC608877B5F749CD4156 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +305,14 @@
 		852BC1F52270E23F004EEFA8 /* VideoReadEditWrite */ = {
 			isa = PBXGroup;
 			children = (
+				852BC2E02270E538004EEFA8 /* Helper */,
 				852BC1F62270E23F004EEFA8 /* AppDelegate.swift */,
 				852BC1F82270E23F004EEFA8 /* ViewController.swift */,
 				852BC1FA2270E23F004EEFA8 /* Main.storyboard */,
 				852BC1FD2270E23F004EEFA8 /* Assets.xcassets */,
 				852BC1FF2270E23F004EEFA8 /* LaunchScreen.storyboard */,
 				852BC2022270E23F004EEFA8 /* Info.plist */,
+				852BC2162270E303004EEFA8 /* Support Files */,
 			);
 			path = VideoReadEditWrite;
 			sourceTree = "<group>";
@@ -96,6 +326,152 @@
 			path = VideoReadEditWriteTests;
 			sourceTree = "<group>";
 		};
+		852BC2162270E303004EEFA8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				852BC2382270E351004EEFA8 /* FilterAssets.bundle */,
+				852BC2392270E351004EEFA8 /* Filters */,
+				852BC2172270E331004EEFA8 /* MTFilter */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		852BC2172270E331004EEFA8 /* MTFilter */ = {
+			isa = PBXGroup;
+			children = (
+				852BC2182270E331004EEFA8 /* MTFilterGroup.swift */,
+				852BC2192270E331004EEFA8 /* MTAntiLuxFilter.swift */,
+				852BC21A2270E331004EEFA8 /* MTLocalLaplacianFilter.metal */,
+				852BC21B2270E331004EEFA8 /* MTImageOverlayFilter.swift */,
+				852BC21C2270E331004EEFA8 /* MTFilter.swift */,
+				852BC21D2270E331004EEFA8 /* MTFilterManager.swift */,
+				852BC21E2270E331004EEFA8 /* MTTintColor.swift */,
+				852BC21F2270E331004EEFA8 /* MTLuxBlendFilter.swift */,
+				852BC2202270E331004EEFA8 /* MTBasicAdjustFilter.metal */,
+				852BC2212270E331004EEFA8 /* MTStarlightFilter.metal */,
+				852BC2222270E331004EEFA8 /* MTAntiLuxFilter.metal */,
+				852BC2232270E331004EEFA8 /* MTImageOverlayFilter.metal */,
+				852BC2242270E331004EEFA8 /* MTLocalLaplacianFilter.swift */,
+				852BC2252270E331004EEFA8 /* MTStarlightFilter.swift */,
+				852BC2262270E331004EEFA8 /* MTLuxBlendFilter.metal */,
+				852BC2272270E331004EEFA8 /* MTBasicAdjustFilter.swift */,
+			);
+			path = MTFilter;
+			sourceTree = "<group>";
+		};
+		852BC2392270E351004EEFA8 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				852BC23A2270E351004EEFA8 /* MTInkwellFilter.swift */,
+				852BC23B2270E351004EEFA8 /* MTCremaFilter.metal */,
+				852BC23C2270E351004EEFA8 /* MTJunoFilter.metal */,
+				852BC23D2270E351004EEFA8 /* MTEarlybirdFilter.swift */,
+				852BC23E2270E351004EEFA8 /* MTSutroFilter.metal */,
+				852BC23F2270E351004EEFA8 /* MTHelenaVideoFilter.metal */,
+				852BC2402270E351004EEFA8 /* MTMavenVideoFilter.swift */,
+				852BC2412270E351004EEFA8 /* MTGinzaVideoFilter.metal */,
+				852BC2422270E351004EEFA8 /* MTClarendonVideoFilter.metal */,
+				852BC2432270E351004EEFA8 /* MTLarkFilter.swift */,
+				852BC2442270E351004EEFA8 /* MTAmaroFilter.swift */,
+				852BC2452270E351004EEFA8 /* MTStinsonVideoFilter.metal */,
+				852BC2462270E351004EEFA8 /* MTGinghamVideoFilter.swift */,
+				852BC2472270E351004EEFA8 /* MTToasterFilter.metal */,
+				852BC2482270E351004EEFA8 /* MTPerpetuaFilter.swift */,
+				852BC2492270E351004EEFA8 /* MTVesperVideoFilter.metal */,
+				852BC24A2270E351004EEFA8 /* MTBrooklynVideoFilter.swift */,
+				852BC24B2270E351004EEFA8 /* MTBrannanFilter.swift */,
+				852BC24C2270E351004EEFA8 /* MTSkylineVideoFilter.metal */,
+				852BC24D2270E351004EEFA8 /* MTCharmesVideoFilter.metal */,
+				852BC24E2270E351004EEFA8 /* MTAdenFilter.swift */,
+				852BC24F2270E351004EEFA8 /* MTSierraFilter.swift */,
+				852BC2502270E351004EEFA8 /* IFShaderLib.h */,
+				852BC2512270E351004EEFA8 /* MTDogpatchVideoFilter.swift */,
+				852BC2522270E351004EEFA8 /* MTHudsonFilter.swift */,
+				852BC2532270E351004EEFA8 /* MTLudwigFilter.swift */,
+				852BC2542270E351004EEFA8 /* MTAshbyVideoFilter.metal */,
+				852BC2552270E351004EEFA8 /* MTWillowFilter.swift */,
+				852BC2562270E351004EEFA8 /* MTKelvinFilter.metal */,
+				852BC2572270E351004EEFA8 /* MTMoonVideoFilter.metal */,
+				852BC2582270E351004EEFA8 /* MTSlumberFilter.metal */,
+				852BC2592270E351004EEFA8 /* MTValenciaFilter.swift */,
+				852BC25A2270E351004EEFA8 /* MT1977Filter.swift */,
+				852BC25B2270E351004EEFA8 /* MTWaldenFilter.metal */,
+				852BC25C2270E351004EEFA8 /* MTNormalFilter.metal */,
+				852BC25D2270E351004EEFA8 /* MTXpro2Filter.swift */,
+				852BC25E2270E351004EEFA8 /* MTRiseFilter.metal */,
+				852BC25F2270E351004EEFA8 /* MTNashvilleFilter.swift */,
+				852BC2602270E351004EEFA8 /* MTHefeFilter.metal */,
+				852BC2612270E351004EEFA8 /* MTLoFiFilter.metal */,
+				852BC2622270E351004EEFA8 /* MTReyesFilter.metal */,
+				852BC2632270E351004EEFA8 /* MTMayfairFilter.metal */,
+				852BC2642270E351004EEFA8 /* MTLarkFilter.metal */,
+				852BC2652270E351004EEFA8 /* MTAmaroFilter.metal */,
+				852BC2662270E351004EEFA8 /* MTStinsonVideoFilter.swift */,
+				852BC2672270E351004EEFA8 /* MTGinghamVideoFilter.metal */,
+				852BC2682270E351004EEFA8 /* MTToasterFilter.swift */,
+				852BC2692270E351004EEFA8 /* MTPerpetuaFilter.metal */,
+				852BC26A2270E351004EEFA8 /* MTVesperVideoFilter.swift */,
+				852BC26B2270E351004EEFA8 /* MTClarendonVideoFilter.swift */,
+				852BC26C2270E351004EEFA8 /* MTJunoFilter.swift */,
+				852BC26D2270E351004EEFA8 /* MTEarlybirdFilter.metal */,
+				852BC26E2270E351004EEFA8 /* MTSutroFilter.swift */,
+				852BC26F2270E351004EEFA8 /* MTHelenaVideoFilter.swift */,
+				852BC2702270E351004EEFA8 /* MTMavenVideoFilter.metal */,
+				852BC2712270E351004EEFA8 /* MTGinzaVideoFilter.swift */,
+				852BC2722270E351004EEFA8 /* MTInkwellFilter.metal */,
+				852BC2732270E351004EEFA8 /* MTCremaFilter.swift */,
+				852BC2742270E351004EEFA8 /* MTLudwigFilter.metal */,
+				852BC2752270E351004EEFA8 /* MTDogpatchVideoFilter.metal */,
+				852BC2762270E351004EEFA8 /* MTHudsonFilter.metal */,
+				852BC2772270E351004EEFA8 /* MTBrannanFilter.metal */,
+				852BC2782270E351004EEFA8 /* MTCharmesVideoFilter.swift */,
+				852BC2792270E351004EEFA8 /* MTSkylineVideoFilter.swift */,
+				852BC27A2270E351004EEFA8 /* MTAdenFilter.metal */,
+				852BC27B2270E351004EEFA8 /* MTSierraFilter.metal */,
+				852BC27C2270E351004EEFA8 /* MTBrooklynVideoFilter.metal */,
+				852BC27D2270E351004EEFA8 /* MT1977Filter.metal */,
+				852BC27E2270E351004EEFA8 /* MTSlumberFilter.swift */,
+				852BC27F2270E351004EEFA8 /* MTValenciaFilter.metal */,
+				852BC2802270E351004EEFA8 /* MTAshbyVideoFilter.swift */,
+				852BC2812270E351004EEFA8 /* MTWillowFilter.metal */,
+				852BC2822270E351004EEFA8 /* MTKelvinFilter.swift */,
+				852BC2832270E351004EEFA8 /* MTMoonVideoFilter.swift */,
+				852BC2842270E351004EEFA8 /* MTReyesFilter.swift */,
+				852BC2852270E351004EEFA8 /* MTMayfairFilter.swift */,
+				852BC2862270E351004EEFA8 /* MTHefeFilter.swift */,
+				852BC2872270E351004EEFA8 /* MTLoFiFilter.swift */,
+				852BC2882270E351004EEFA8 /* MTNashvilleFilter.metal */,
+				852BC2892270E351004EEFA8 /* MTWaldenFilter.swift */,
+				852BC28A2270E351004EEFA8 /* MTNormalFilter.swift */,
+				852BC28B2270E351004EEFA8 /* MTXpro2Filter.metal */,
+				852BC28C2270E351004EEFA8 /* MTRiseFilter.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		852BC2E02270E538004EEFA8 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				852BC2E12270E55D004EEFA8 /* VideoProcessing.swift */,
+				852BC2E32270F548004EEFA8 /* FileHelper.swift */,
+				852BC2E522710CDB004EEFA8 /* VideoReadEditWrite-Bridging-Header.h */,
+				852BC2E822710D3D004EEFA8 /* ObjCHelper.h */,
+				852BC2E922710D3D004EEFA8 /* ObjCHelper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		94AF28AB82CAA3115261221A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F48870D1970FB1706D748B21 /* Pods-VideoReadEditWrite.debug.xcconfig */,
+				2A68FB8C88BF71E856B32DF1 /* Pods-VideoReadEditWrite.release.xcconfig */,
+				FF0824193AD8542C28EAA0DC /* Pods-VideoReadEditWriteTests.debug.xcconfig */,
+				AABE5A87013FD1F95D93D362 /* Pods-VideoReadEditWriteTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +479,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 852BC2102270E23F004EEFA8 /* Build configuration list for PBXNativeTarget "VideoReadEditWrite" */;
 			buildPhases = (
+				3D747942D2FA74A6B250FE42 /* [CP] Check Pods Manifest.lock */,
 				852BC1EF2270E23F004EEFA8 /* Sources */,
 				852BC1F02270E23F004EEFA8 /* Frameworks */,
 				852BC1F12270E23F004EEFA8 /* Resources */,
+				D2A7B35333627649750B895E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +498,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 852BC2132270E23F004EEFA8 /* Build configuration list for PBXNativeTarget "VideoReadEditWriteTests" */;
 			buildPhases = (
+				BBEF3283FD6FC4C2D9E527A5 /* [CP] Check Pods Manifest.lock */,
 				852BC2032270E23F004EEFA8 /* Sources */,
 				852BC2042270E23F004EEFA8 /* Frameworks */,
 				852BC2052270E23F004EEFA8 /* Resources */,
@@ -146,6 +525,7 @@
 				TargetAttributes = {
 					852BC1F22270E23F004EEFA8 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					852BC2062270E23F004EEFA8 = {
 						CreatedOnToolsVersion = 10.1;
@@ -177,6 +557,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				852BC28D2270E352004EEFA8 /* FilterAssets.bundle in Resources */,
 				852BC2012270E23F004EEFA8 /* LaunchScreen.storyboard in Resources */,
 				852BC1FE2270E23F004EEFA8 /* Assets.xcassets in Resources */,
 				852BC1FC2270E23F004EEFA8 /* Main.storyboard in Resources */,
@@ -192,13 +573,171 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D747942D2FA74A6B250FE42 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VideoReadEditWrite-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBEF3283FD6FC4C2D9E527A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VideoReadEditWriteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2A7B35333627649750B895E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VideoReadEditWrite/Pods-VideoReadEditWrite-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MetalPetal/MetalPetal.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MetalPetal.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VideoReadEditWrite/Pods-VideoReadEditWrite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		852BC1EF2270E23F004EEFA8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				852BC2292270E331004EEFA8 /* MTAntiLuxFilter.swift in Sources */,
+				852BC2942270E352004EEFA8 /* MTMavenVideoFilter.swift in Sources */,
+				852BC2C12270E352004EEFA8 /* MTSutroFilter.swift in Sources */,
+				852BC2C92270E352004EEFA8 /* MTHudsonFilter.metal in Sources */,
+				852BC2972270E352004EEFA8 /* MTLarkFilter.swift in Sources */,
+				852BC2C72270E352004EEFA8 /* MTLudwigFilter.metal in Sources */,
+				852BC2CB2270E352004EEFA8 /* MTCharmesVideoFilter.swift in Sources */,
+				852BC2952270E352004EEFA8 /* MTGinzaVideoFilter.metal in Sources */,
+				852BC2D82270E352004EEFA8 /* MTMayfairFilter.swift in Sources */,
+				852BC29A2270E352004EEFA8 /* MTGinghamVideoFilter.swift in Sources */,
+				852BC2A52270E352004EEFA8 /* MTHudsonFilter.swift in Sources */,
+				852BC2DC2270E352004EEFA8 /* MTWaldenFilter.swift in Sources */,
+				852BC2AD2270E352004EEFA8 /* MT1977Filter.swift in Sources */,
+				852BC2962270E352004EEFA8 /* MTClarendonVideoFilter.metal in Sources */,
+				852BC2B82270E352004EEFA8 /* MTAmaroFilter.metal in Sources */,
+				852BC2D92270E352004EEFA8 /* MTHefeFilter.swift in Sources */,
+				852BC2BA2270E352004EEFA8 /* MTGinghamVideoFilter.metal in Sources */,
+				852BC2B42270E352004EEFA8 /* MTLoFiFilter.metal in Sources */,
+				852BC2DE2270E352004EEFA8 /* MTXpro2Filter.metal in Sources */,
+				852BC2B52270E352004EEFA8 /* MTReyesFilter.metal in Sources */,
+				852BC2B92270E352004EEFA8 /* MTStinsonVideoFilter.swift in Sources */,
+				852BC2332270E331004EEFA8 /* MTImageOverlayFilter.metal in Sources */,
+				852BC29D2270E352004EEFA8 /* MTVesperVideoFilter.metal in Sources */,
+				852BC2EA22710D3D004EEFA8 /* ObjCHelper.m in Sources */,
+				852BC2302270E331004EEFA8 /* MTBasicAdjustFilter.metal in Sources */,
+				852BC2A72270E352004EEFA8 /* MTAshbyVideoFilter.metal in Sources */,
+				852BC2B02270E352004EEFA8 /* MTXpro2Filter.swift in Sources */,
+				852BC2DA2270E352004EEFA8 /* MTLoFiFilter.swift in Sources */,
 				852BC1F92270E23F004EEFA8 /* ViewController.swift in Sources */,
+				852BC2362270E331004EEFA8 /* MTLuxBlendFilter.metal in Sources */,
+				852BC2BF2270E352004EEFA8 /* MTJunoFilter.swift in Sources */,
+				852BC2932270E352004EEFA8 /* MTHelenaVideoFilter.metal in Sources */,
+				852BC22D2270E331004EEFA8 /* MTFilterManager.swift in Sources */,
+				852BC2C02270E352004EEFA8 /* MTEarlybirdFilter.metal in Sources */,
+				852BC2372270E331004EEFA8 /* MTBasicAdjustFilter.swift in Sources */,
+				852BC2DD2270E352004EEFA8 /* MTNormalFilter.swift in Sources */,
+				852BC2AC2270E352004EEFA8 /* MTValenciaFilter.swift in Sources */,
+				852BC22C2270E331004EEFA8 /* MTFilter.swift in Sources */,
+				852BC2BB2270E352004EEFA8 /* MTToasterFilter.swift in Sources */,
+				852BC2312270E331004EEFA8 /* MTStarlightFilter.metal in Sources */,
+				852BC28E2270E352004EEFA8 /* MTInkwellFilter.swift in Sources */,
+				852BC2DB2270E352004EEFA8 /* MTNashvilleFilter.metal in Sources */,
+				852BC29C2270E352004EEFA8 /* MTPerpetuaFilter.swift in Sources */,
+				852BC22F2270E331004EEFA8 /* MTLuxBlendFilter.swift in Sources */,
+				852BC2902270E352004EEFA8 /* MTJunoFilter.metal in Sources */,
+				852BC2A32270E352004EEFA8 /* MTSierraFilter.swift in Sources */,
+				852BC2B72270E352004EEFA8 /* MTLarkFilter.metal in Sources */,
+				852BC2AB2270E352004EEFA8 /* MTSlumberFilter.metal in Sources */,
+				852BC2E42270F548004EEFA8 /* FileHelper.swift in Sources */,
+				852BC22E2270E331004EEFA8 /* MTTintColor.swift in Sources */,
+				852BC2D52270E352004EEFA8 /* MTKelvinFilter.swift in Sources */,
+				852BC2A42270E352004EEFA8 /* MTDogpatchVideoFilter.swift in Sources */,
+				852BC2C52270E352004EEFA8 /* MTInkwellFilter.metal in Sources */,
+				852BC2BE2270E352004EEFA8 /* MTClarendonVideoFilter.swift in Sources */,
+				852BC2C62270E352004EEFA8 /* MTCremaFilter.swift in Sources */,
+				852BC2342270E331004EEFA8 /* MTLocalLaplacianFilter.swift in Sources */,
+				852BC2282270E331004EEFA8 /* MTFilterGroup.swift in Sources */,
+				852BC2A82270E352004EEFA8 /* MTWillowFilter.swift in Sources */,
+				852BC2352270E331004EEFA8 /* MTStarlightFilter.swift in Sources */,
+				852BC2A92270E352004EEFA8 /* MTKelvinFilter.metal in Sources */,
+				852BC2B62270E352004EEFA8 /* MTMayfairFilter.metal in Sources */,
+				852BC28F2270E352004EEFA8 /* MTCremaFilter.metal in Sources */,
+				852BC2912270E352004EEFA8 /* MTEarlybirdFilter.swift in Sources */,
+				852BC2AE2270E352004EEFA8 /* MTWaldenFilter.metal in Sources */,
+				852BC2BD2270E352004EEFA8 /* MTVesperVideoFilter.swift in Sources */,
+				852BC2DF2270E352004EEFA8 /* MTRiseFilter.swift in Sources */,
+				852BC2AA2270E352004EEFA8 /* MTMoonVideoFilter.metal in Sources */,
+				852BC2A62270E352004EEFA8 /* MTLudwigFilter.swift in Sources */,
+				852BC2D42270E352004EEFA8 /* MTWillowFilter.metal in Sources */,
+				852BC2A22270E352004EEFA8 /* MTAdenFilter.swift in Sources */,
+				852BC2BC2270E352004EEFA8 /* MTPerpetuaFilter.metal in Sources */,
+				852BC22B2270E331004EEFA8 /* MTImageOverlayFilter.swift in Sources */,
+				852BC2982270E352004EEFA8 /* MTAmaroFilter.swift in Sources */,
+				852BC2D02270E352004EEFA8 /* MT1977Filter.metal in Sources */,
+				852BC2B32270E352004EEFA8 /* MTHefeFilter.metal in Sources */,
+				852BC2CF2270E352004EEFA8 /* MTBrooklynVideoFilter.metal in Sources */,
+				852BC2AF2270E352004EEFA8 /* MTNormalFilter.metal in Sources */,
+				852BC2CC2270E352004EEFA8 /* MTSkylineVideoFilter.swift in Sources */,
+				852BC2B12270E352004EEFA8 /* MTRiseFilter.metal in Sources */,
+				852BC2D12270E352004EEFA8 /* MTSlumberFilter.swift in Sources */,
+				852BC2CE2270E352004EEFA8 /* MTSierraFilter.metal in Sources */,
+				852BC2C42270E352004EEFA8 /* MTGinzaVideoFilter.swift in Sources */,
+				852BC29E2270E352004EEFA8 /* MTBrooklynVideoFilter.swift in Sources */,
+				852BC2D72270E352004EEFA8 /* MTReyesFilter.swift in Sources */,
+				852BC2922270E352004EEFA8 /* MTSutroFilter.metal in Sources */,
+				852BC2322270E331004EEFA8 /* MTAntiLuxFilter.metal in Sources */,
+				852BC2C32270E352004EEFA8 /* MTMavenVideoFilter.metal in Sources */,
+				852BC2992270E352004EEFA8 /* MTStinsonVideoFilter.metal in Sources */,
+				852BC2C82270E352004EEFA8 /* MTDogpatchVideoFilter.metal in Sources */,
+				852BC2A02270E352004EEFA8 /* MTSkylineVideoFilter.metal in Sources */,
+				852BC22A2270E331004EEFA8 /* MTLocalLaplacianFilter.metal in Sources */,
+				852BC2D22270E352004EEFA8 /* MTValenciaFilter.metal in Sources */,
+				852BC2E22270E55D004EEFA8 /* VideoProcessing.swift in Sources */,
+				852BC2A12270E352004EEFA8 /* MTCharmesVideoFilter.metal in Sources */,
+				852BC2D32270E352004EEFA8 /* MTAshbyVideoFilter.swift in Sources */,
+				852BC2B22270E352004EEFA8 /* MTNashvilleFilter.swift in Sources */,
 				852BC1F72270E23F004EEFA8 /* AppDelegate.swift in Sources */,
+				852BC29B2270E352004EEFA8 /* MTToasterFilter.metal in Sources */,
+				852BC29F2270E352004EEFA8 /* MTBrannanFilter.swift in Sources */,
+				852BC2CA2270E352004EEFA8 /* MTBrannanFilter.metal in Sources */,
+				852BC2CD2270E352004EEFA8 /* MTAdenFilter.metal in Sources */,
+				852BC2C22270E352004EEFA8 /* MTHelenaVideoFilter.swift in Sources */,
+				852BC2D62270E352004EEFA8 /* MTMoonVideoFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,17 +897,24 @@
 		};
 		852BC2112270E23F004EEFA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F48870D1970FB1706D748B21 /* Pods-VideoReadEditWrite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = AGHA3VWM5L;
 				INFOPLIST_FILE = VideoReadEditWrite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.historic.VideoReadEditWrite;
+				MTL_HEADER_SEARCH_PATHS = "${PODS_CONFIGURATION_BUILD_DIR}/MetalPetal/MetalPetal.framework/Headers";
+				PRODUCT_BUNDLE_IDENTIFIER = com.historic.haudioplayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = dev;
+				SWIFT_OBJC_BRIDGING_HEADER = "VideoReadEditWrite/Helper/VideoReadEditWrite-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -376,17 +922,23 @@
 		};
 		852BC2122270E23F004EEFA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A68FB8C88BF71E856B32DF1 /* Pods-VideoReadEditWrite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AGHA3VWM5L;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = VideoReadEditWrite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.historic.VideoReadEditWrite;
+				MTL_HEADER_SEARCH_PATHS = "${PODS_CONFIGURATION_BUILD_DIR}/MetalPetal/MetalPetal.framework/Headers";
+				PRODUCT_BUNDLE_IDENTIFIER = com.historic.haudioplayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "VideoReadEditWrite/Helper/VideoReadEditWrite-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -394,6 +946,7 @@
 		};
 		852BC2142270E23F004EEFA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF0824193AD8542C28EAA0DC /* Pods-VideoReadEditWriteTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +968,7 @@
 		};
 		852BC2152270E23F004EEFA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AABE5A87013FD1F95D93D362 /* Pods-VideoReadEditWriteTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

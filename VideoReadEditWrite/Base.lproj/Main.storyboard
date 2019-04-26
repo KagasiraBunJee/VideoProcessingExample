@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yw8-WV-mzo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,92 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VideoReadEditWrite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E4v-Ez-uqM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w35-qb-RJ5">
+                                <rect key="frame" x="8" y="72" width="66" height="30"/>
+                                <state key="normal" title="Get video"/>
+                                <connections>
+                                    <action selector="getVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="61L-Sh-RIL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhh-iY-g5e">
+                                <rect key="frame" x="82" y="72" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="acO-HI-oO0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQa-vo-PMW">
+                                <rect key="frame" x="124" y="72" width="87" height="30"/>
+                                <state key="normal" title="Watch result"/>
+                                <connections>
+                                    <action selector="watchResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="69g-dP-2Ut"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9DT-1K-Zjp">
+                                <rect key="frame" x="0.0" y="72" width="375" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLP-dp-Hzt">
+                                <rect key="frame" x="219" y="72" width="92" height="30"/>
+                                <state key="normal" title="Random filter"/>
+                                <connections>
+                                    <action selector="applyRandomFilter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Xu-HU-dGq"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dhh-iY-g5e" firstAttribute="leading" secondItem="w35-qb-RJ5" secondAttribute="trailing" constant="8" id="5dA-9q-vrr"/>
+                            <constraint firstItem="RLP-dp-Hzt" firstAttribute="leading" secondItem="sQa-vo-PMW" secondAttribute="trailing" constant="8" id="6DV-ae-s1t"/>
+                            <constraint firstItem="sQa-vo-PMW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="IEz-Cx-CRR"/>
+                            <constraint firstItem="sQa-vo-PMW" firstAttribute="leading" secondItem="dhh-iY-g5e" secondAttribute="trailing" constant="8" id="JmI-1e-u5M"/>
+                            <constraint firstItem="dhh-iY-g5e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="S9F-O7-ouH"/>
+                            <constraint firstItem="w35-qb-RJ5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="VOG-Vp-Plw"/>
+                            <constraint firstItem="E4v-Ez-uqM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fi0-xa-uRi"/>
+                            <constraint firstItem="E4v-Ez-uqM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mGq-DR-vXh"/>
+                            <constraint firstItem="E4v-Ez-uqM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pBX-bp-d4Q"/>
+                            <constraint firstItem="E4v-Ez-uqM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rcD-6v-V9d"/>
+                            <constraint firstItem="RLP-dp-Hzt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="sGv-Yv-zun"/>
+                            <constraint firstItem="w35-qb-RJ5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="xbO-uH-vef"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="PN0-rE-xEV"/>
+                    <connections>
+                        <outlet property="imageView" destination="E4v-Ez-uqM" id="I9T-GZ-0EW"/>
+                        <outlet property="progressView" destination="9DT-1K-Zjp" id="sfa-C7-cwg"/>
+                        <outlet property="randomFilterAction" destination="RLP-dp-Hzt" id="cSN-fE-uId"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="992.79999999999995" y="29.23538230884558"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xJo-TI-j26">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yw8-WV-mzo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t2v-HY-hiI">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8VF-G1-2jd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IOc-Ew-mS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-119.2" y="-668.81559220389806"/>
         </scene>
     </scenes>
 </document>
