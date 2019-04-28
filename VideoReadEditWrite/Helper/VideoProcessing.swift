@@ -7,9 +7,7 @@
 //
 
 import UIKit
-import MetalPetal
 import AVFoundation
-import Photos
 
 protocol VideoProcessingDelegate: class {
     func videoProcessing(finishedWithError error: Error?)
