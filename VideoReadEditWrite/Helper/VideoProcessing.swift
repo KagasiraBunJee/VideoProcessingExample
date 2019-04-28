@@ -39,13 +39,13 @@ class VideoProcessing: NSObject {
     /** Output file location (URL must be isFileType true) */
     private(set) var outputUrl: URL?
     
-    //video processing queue
+    /** Video processing queue */
     private let writeVideoQueue = DispatchQueue(label: "video.processing")
-    //audio processing queue
+    /** Audio processing queue */
     private let writeAudioQueue = DispatchQueue(label: "audio.processing")
-    //finish writing queue
+    /** Finish writing queue */
     private let processVideoQueue = DispatchQueue(label: "video.finish")
-    //audio and video queue synchronyzer
+    /** Audio and video queue synchronyzer */
     private var dispatchgroup: DispatchGroup?
     
     weak var delegate: VideoProcessingDelegate?
@@ -71,6 +71,7 @@ class VideoProcessing: NSObject {
         prepareWriter()
     }
     
+    /** Start reencoding asset */
     func start() {
         if let reader = assetReader,
             let writer = assetWriter,
