@@ -93,9 +93,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func applyRandomFilter(_ sender: Any) {
-        let filterType = MTFilterManager.filters[Int.random(in: 0..<MTFilterManager.filters.count)]
-        self.filter = filterType.init(manager: self.filterManager)
-        debugPrint(filterType.name)
+//        let filterType = MTFilterManager.filters[Int.random(in: 0..<MTFilterManager.filters.count)]
+//        self.filter = filterType.init(manager: self.filterManager)
+//        debugPrint(filterType.name)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "FilterPickerViewController") as! FilterPickerViewController
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func reencodeAction(_ sender: Any) {
+        videoWriter?.start()
     }
     
     func makeImagePreview() {
@@ -103,10 +109,21 @@ class ViewController: UIViewController {
         if let cgImage = try? AVAssetImageGenerator(asset: asset).copyCGImage(at: .zero, actualTime: nil) {
             let image = UIImage(cgImage: cgImage, scale: 1.0, orientation: .up)
             imageView.image = image
+            
+            let previewImagePath = FileHelper.filtersPath()
+            if FileHelper.validateDirectory(path: previewImagePath, createIfNotExists: true) {
+                do {
+                    try image.jpegData(compressionQuality: 0.5)?.write(to: URL(string: previewImagePath+"/default.jpg")!)
+                    self.showAlert(text: "default image created")
+                } catch let error {
+                    self.showAlert(text: error.localizedDescription)
+                }
+            } else {
+                self.showAlert(text: "there is no dir " + previewImagePath)
+            }
         }
         videoWriter?.delegate = self
         videoWriter?.prepare(asset: asset, outputUrl: URL(string: FileHelper.newMediaFilePath(extension: "mp4"))!)
-        videoWriter?.start()
     }
 }
 
@@ -117,11 +134,10 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         debugPrint(info)
         if let url = info[UIImagePickerController.InfoKey.mediaURL] as? URL {
             selectedAsset = AVAsset(url: url)
+            picker.dismiss(animated: true, completion: nil)
             makeImagePreview()
         }
-        picker.dismiss(animated: true, completion: nil)
     }
-    
 }
 
 extension ViewController: VideoProcessingDelegate {
@@ -157,4 +173,15 @@ extension ViewController: VideoProcessingDelegate {
         }
         return nil
     }
+}
+
+extension UIViewController {
+    
+    func showAlert(text: String) {
+        let alertVC = UIAlertController(title: "Test", message: text, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertVC.addAction(okAction)
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
 }

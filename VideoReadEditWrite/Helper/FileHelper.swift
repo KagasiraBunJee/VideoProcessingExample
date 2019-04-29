@@ -21,4 +21,32 @@ class FileHelper: NSObject {
         let name = "output."+`extension`
         return documentDirectory() + name
     }
+    
+    class func filtersPath() -> String {
+        return documentDirectory() + "filters"
+    }
+    
+    class func validateDirectory(path: String, createIfNotExists: Bool) -> Bool {
+        var exists: Bool = false
+        let path = URL(string: path)!.relativePath
+        
+        var isDir: ObjCBool = true
+        exists = FileManager.default.fileExists(atPath: path, isDirectory: &isDir)
+        
+        if createIfNotExists && !exists {
+            do {
+                try FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
+                exists = true
+            } catch let error {
+                debugPrint("create dir error: ", error)
+            }
+        }
+        
+        return exists
+    }
+    
+    class func createFile(at path: String, content: Data?) -> Bool {
+        try? FileManager.default.removeItem(atPath: path)
+        return FileManager.default.createFile(atPath: path, contents: content, attributes: nil)
+    }
 }

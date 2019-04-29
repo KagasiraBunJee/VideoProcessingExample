@@ -116,7 +116,8 @@
 		852BC2DF2270E352004EEFA8 /* MTRiseFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC28C2270E351004EEFA8 /* MTRiseFilter.swift */; };
 		852BC2E22270E55D004EEFA8 /* VideoProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2E12270E55D004EEFA8 /* VideoProcessing.swift */; };
 		852BC2E42270F548004EEFA8 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2E32270F548004EEFA8 /* FileHelper.swift */; };
-		852BC2EA22710D3D004EEFA8 /* ObjCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2E922710D3D004EEFA8 /* ObjCHelper.m */; };
+		852BC2ED2276601D004EEFA8 /* FilterPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2EC2276601D004EEFA8 /* FilterPickerViewController.swift */; };
+		852BC2F022766050004EEFA8 /* FIlterPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2EF22766050004EEFA8 /* FIlterPickerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -245,8 +246,8 @@
 		852BC2E12270E55D004EEFA8 /* VideoProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoProcessing.swift; sourceTree = "<group>"; };
 		852BC2E32270F548004EEFA8 /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
 		852BC2E522710CDB004EEFA8 /* VideoReadEditWrite-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VideoReadEditWrite-Bridging-Header.h"; sourceTree = "<group>"; };
-		852BC2E822710D3D004EEFA8 /* ObjCHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCHelper.h; sourceTree = "<group>"; };
-		852BC2E922710D3D004EEFA8 /* ObjCHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCHelper.m; sourceTree = "<group>"; };
+		852BC2EC2276601D004EEFA8 /* FilterPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPickerViewController.swift; sourceTree = "<group>"; };
+		852BC2EF22766050004EEFA8 /* FIlterPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIlterPickerCell.swift; sourceTree = "<group>"; };
 		AABE5A87013FD1F95D93D362 /* Pods-VideoReadEditWriteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoReadEditWriteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoReadEditWriteTests/Pods-VideoReadEditWriteTests.release.xcconfig"; sourceTree = "<group>"; };
 		D1A4EAFC4F2ACC16F05230FA /* Pods_VideoReadEditWriteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoReadEditWriteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48870D1970FB1706D748B21 /* Pods-VideoReadEditWrite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoReadEditWrite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoReadEditWrite/Pods-VideoReadEditWrite.debug.xcconfig"; sourceTree = "<group>"; };
@@ -305,6 +306,7 @@
 		852BC1F52270E23F004EEFA8 /* VideoReadEditWrite */ = {
 			isa = PBXGroup;
 			children = (
+				852BC2EB22765FD1004EEFA8 /* FilterList */,
 				852BC2E02270E538004EEFA8 /* Helper */,
 				852BC1F62270E23F004EEFA8 /* AppDelegate.swift */,
 				852BC1F82270E23F004EEFA8 /* ViewController.swift */,
@@ -455,10 +457,25 @@
 				852BC2E12270E55D004EEFA8 /* VideoProcessing.swift */,
 				852BC2E32270F548004EEFA8 /* FileHelper.swift */,
 				852BC2E522710CDB004EEFA8 /* VideoReadEditWrite-Bridging-Header.h */,
-				852BC2E822710D3D004EEFA8 /* ObjCHelper.h */,
-				852BC2E922710D3D004EEFA8 /* ObjCHelper.m */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		852BC2EB22765FD1004EEFA8 /* FilterList */ = {
+			isa = PBXGroup;
+			children = (
+				852BC2EE22766027004EEFA8 /* Cell */,
+				852BC2EC2276601D004EEFA8 /* FilterPickerViewController.swift */,
+			);
+			path = FilterList;
+			sourceTree = "<group>";
+		};
+		852BC2EE22766027004EEFA8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				852BC2EF22766050004EEFA8 /* FIlterPickerCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		94AF28AB82CAA3115261221A /* Pods */ = {
@@ -658,7 +675,6 @@
 				852BC2B92270E352004EEFA8 /* MTStinsonVideoFilter.swift in Sources */,
 				852BC2332270E331004EEFA8 /* MTImageOverlayFilter.metal in Sources */,
 				852BC29D2270E352004EEFA8 /* MTVesperVideoFilter.metal in Sources */,
-				852BC2EA22710D3D004EEFA8 /* ObjCHelper.m in Sources */,
 				852BC2302270E331004EEFA8 /* MTBasicAdjustFilter.metal in Sources */,
 				852BC2A72270E352004EEFA8 /* MTAshbyVideoFilter.metal in Sources */,
 				852BC2B02270E352004EEFA8 /* MTXpro2Filter.swift in Sources */,
@@ -705,6 +721,7 @@
 				852BC2A62270E352004EEFA8 /* MTLudwigFilter.swift in Sources */,
 				852BC2D42270E352004EEFA8 /* MTWillowFilter.metal in Sources */,
 				852BC2A22270E352004EEFA8 /* MTAdenFilter.swift in Sources */,
+				852BC2ED2276601D004EEFA8 /* FilterPickerViewController.swift in Sources */,
 				852BC2BC2270E352004EEFA8 /* MTPerpetuaFilter.metal in Sources */,
 				852BC22B2270E331004EEFA8 /* MTImageOverlayFilter.swift in Sources */,
 				852BC2982270E352004EEFA8 /* MTAmaroFilter.swift in Sources */,
@@ -736,6 +753,7 @@
 				852BC29F2270E352004EEFA8 /* MTBrannanFilter.swift in Sources */,
 				852BC2CA2270E352004EEFA8 /* MTBrannanFilter.metal in Sources */,
 				852BC2CD2270E352004EEFA8 /* MTAdenFilter.metal in Sources */,
+				852BC2F022766050004EEFA8 /* FIlterPickerCell.swift in Sources */,
 				852BC2C22270E352004EEFA8 /* MTHelenaVideoFilter.swift in Sources */,
 				852BC2D62270E352004EEFA8 /* MTMoonVideoFilter.swift in Sources */,
 			);
