@@ -102,13 +102,13 @@ class LocalVideoProcessing: VideoProcessing {
                             
                             let time = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
                             let progress = CMTimeGetSeconds(time)/CMTimeGetSeconds(duration)
-                            self?.delegate?.videoProcessing(progress: Float(progress))
+                            self?.delegate?.videoProcessing?(progress: Float(progress))
                             
                             let newSample = autoreleasepool(invoking: { [adaptor = adaptor] () -> (pixelBuffer: CVImageBuffer?, time: CMTime) in
                                 
                                 let imgBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
                                 
-                                if let delegateBuffer = self?.delegate?.videoProcessing(cvImageBuffer: imgBuffer, imageBufferPool: adaptor.pixelBufferPool) {
+                                if let delegateBuffer = self?.delegate?.videoProcessing?(cvImageBuffer: imgBuffer, imageBufferPool: adaptor.pixelBufferPool) {
                                     return (delegateBuffer, time)
                                 }
                                 
@@ -170,13 +170,13 @@ class LocalVideoProcessing: VideoProcessing {
                         self?.assetWriter?.finishWriting(completionHandler: {
                             if let url = self?.outputUrl {
                                 DispatchQueue.main.async { [weak self] in
-                                    self?.delegate?.videoProcessing(finishedSuccessfully: url)
+                                    self?.delegate?.videoProcessing?(finishedSuccessfully: url)
                                 }
                             }
                         })
                     } else {
                         DispatchQueue.main.async { [weak self] in
-                            self?.delegate?.videoProcessing(finishedWithError: error)
+                            self?.delegate?.videoProcessing?(finishedWithError: error)
                         }
                     }
                 }
