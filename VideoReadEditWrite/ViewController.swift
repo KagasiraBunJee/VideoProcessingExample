@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     let downloadLink = "video.mp4"
     var renderView = MTIImageView(frame: .zero)
-    var videoWriter: VideoProcessing? = VideoProcessing()
+    var videoWriter: VideoProcessing? = LocalVideoProcessing()
     
     var selectedAsset: AVAsset?
     

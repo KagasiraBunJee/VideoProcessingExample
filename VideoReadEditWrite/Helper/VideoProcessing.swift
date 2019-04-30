@@ -9,14 +9,22 @@
 import UIKit
 import AVFoundation
 
+@objc
 protocol VideoProcessingDelegate: class {
-    func videoProcessing(finishedWithError error: Error?)
-    func videoProcessing(finishedSuccessfully outputURL: URL)
-    func videoProcessing(cvImageBuffer: CVImageBuffer?, imageBufferPool: CVPixelBufferPool?) -> CVImageBuffer?
-    func videoProcessing(progress: Float)
+    @objc optional func videoProcessing(finishedWithError error: Error?)
+    @objc optional func videoProcessing(finishedSuccessfully outputURL: URL)
+    @objc optional func videoProcessing(cvImageBuffer: CVImageBuffer?, imageBufferPool: CVPixelBufferPool?) -> CVImageBuffer?
+    @objc optional func videoProcessing(progress: Float)
 }
 
-class VideoProcessing: NSObject {
+protocol VideoProcessing: class {
+    var delegate: VideoProcessingDelegate? { get set }
+    
+    func prepare(asset: AVAsset, outputUrl: URL)
+    func start()
+}
+
+class LocalVideoProcessing: VideoProcessing {
     
     //reader
     private var assetReader: AVAssetReader?
@@ -48,9 +56,7 @@ class VideoProcessing: NSObject {
     
     weak var delegate: VideoProcessingDelegate?
     
-    override init() {
-        super.init()
-    }
+    init() {}
     
     /**
      Prepare asset for processing, setting output URL for output file
