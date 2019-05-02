@@ -11,9 +11,50 @@ import AVFoundation
 
 @objc
 protocol VideoEncoderDelegate: class {
+    /**
+     Defines when read or write has been finished with error and has not applied any changes.
+     
+     - parameters:
+        - error: Defines an error for operation
+    */
     @objc optional func videoEncoder(finishedWithError error: Error?)
+    
+    /**
+     Defines when encoding successfuly finished with output URL link for file
+     
+     - parameters:
+        - outputURL: URL for encoded and edited file.
+     */
     @objc optional func videoEncoder(finishedSuccessfully outputURL: URL)
-    @objc optional func videoEncoder(cvImageBuffer: CVImageBuffer?, imageBufferPool: CVPixelBufferPool?) -> CVImageBuffer?
+    
+    /**
+     Defines delegate method which comes with each video frame buffer and it's buufer pool it relates to and each frame time.
+     Incoming buffer is immutable and you should only use it for processing or editing in it's own pool it is allocated in
+     and return only new processed/edited or default one. Do not create another queues inside this delegate.
+     Do all work inside this method scope, queue and pool for performance.
+     
+     - parameters:
+        - cvImageBuffer: Frame's video pixel buffer
+        - imageBufferPool: Frame's video pixel buffer pool
+        - time: Frame's time in video
+     */
+    @objc optional func videoEncoder(cvImageBuffer: CVImageBuffer?, imageBufferPool: CVPixelBufferPool?, time: CMTime) -> CVImageBuffer?
+    
+    /**
+     Defines delegate method which comes with audio buffer in media file. All buffer processing perform in scope of this method, including queue.
+     
+     - parameters:
+        - audioBuffer: Video's audio buffer
+        - time: Frame's time in video
+     */
+    @objc optional func videoEncoder(audioBuffer: CMSampleBuffer?, time: CMTime) -> CMSampleBuffer?
+    
+    /**
+     Tracks writing progress
+     
+     - parameters:
+        - progress: Current writing progress. (from 0.0 to 1.0)
+     */
     @objc optional func videoEncoder(progress: Float)
 }
 
@@ -54,6 +95,7 @@ class LocalVideoEncoder: VideoEncoder {
     /** Audio and video queue synchronyzer */
     private var dispatchgroup: DispatchGroup?
     
+    /** The object that acts as the delegate of the video encoder. */
     weak var delegate: VideoEncoderDelegate?
     
     init() {}
@@ -77,77 +119,74 @@ class LocalVideoEncoder: VideoEncoder {
     
     /** Start reencoding asset */
     func start() {
-        if let reader = assetReader,
-            let writer = assetWriter,
-            let readerVideo = assetReaderVideoOutput,
-            let readerAudio = assetReaderAudioOutput,
-            let writerVideo = assetWriterVideoInput,
-            let writerAudio = assetWriterAudioInput,
-            let adaptor = assetWriterVideoInputAdaptor
-        {
-            
+        if let reader = assetReader, let writer = assetWriter {
             guard reader.startReading(), writer.startWriting() else { return }
             writer.startSession(atSourceTime: .zero)
     
             processVideoQueue.async { [weak self] in
                 
                 self?.dispatchgroup = DispatchGroup()
-                self?.dispatchgroup?.enter()
-                
-                writerVideo.requestMediaDataWhenReady(on: self!.writeVideoQueue) { [weak self] in
-                    var complete = false
-                    while writerVideo.isReadyForMoreMediaData && !complete {
-                        var sample = readerVideo.copyNextSampleBuffer()
-                        if let sampleBuffer = sample, let duration = self?.asset?.duration {
-                            
-                            let time = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
-                            let progress = CMTimeGetSeconds(time)/CMTimeGetSeconds(duration)
-                            self?.delegate?.videoEncoder?(progress: Float(progress))
-                            
-                            let newSample = autoreleasepool(invoking: { [adaptor = adaptor] () -> (pixelBuffer: CVImageBuffer?, time: CMTime) in
+
+                if let writerVideo = self?.assetWriterVideoInput,
+                    let adaptor = self?.assetWriterVideoInputAdaptor,
+                    let readerVideo = self?.assetReaderVideoOutput
+                {
+                    self?.dispatchgroup?.enter()
+                    writerVideo.requestMediaDataWhenReady(on: self!.writeVideoQueue) { [weak self] in
+                        var complete = false
+                        while writerVideo.isReadyForMoreMediaData && !complete {
+                            var sample = readerVideo.copyNextSampleBuffer()
+                            if let sampleBuffer = sample, let duration = self?.asset?.duration {
                                 
-                                let imgBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
+                                let time = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
+                                let progress = CMTimeGetSeconds(time)/CMTimeGetSeconds(duration)
+                                self?.delegate?.videoEncoder?(progress: Float(progress))
                                 
-                                if let delegateBuffer = self?.delegate?.videoEncoder?(cvImageBuffer: imgBuffer, imageBufferPool: adaptor.pixelBufferPool) {
-                                    return (delegateBuffer, time)
-                                }
+                                let newSample = autoreleasepool(invoking: { [adaptor = adaptor] () -> (pixelBuffer: CVImageBuffer?, time: CMTime) in
+                                    let imgBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
+                                    let newBuffer = self?.delegate?.videoEncoder?(cvImageBuffer: imgBuffer, imageBufferPool: adaptor.pixelBufferPool, time: time) ?? imgBuffer
+                                    return (newBuffer, time)
+                                })
                                 
-                                return (imgBuffer, time)
-                            })
-                            
-                            adaptor.append(newSample.pixelBuffer!, withPresentationTime: newSample.time)
-                            sample = nil
-                        } else {
-                            writerVideo.markAsFinished()
-                            complete = true
+                                adaptor.append(newSample.pixelBuffer!, withPresentationTime: newSample.time)
+                                sample = nil
+                            } else {
+                                writerVideo.markAsFinished()
+                                complete = true
+                            }
                         }
-                    }
-                    
-                    if complete {
-                        self?.dispatchgroup?.leave()
+                        
+                        if complete {
+                            self?.dispatchgroup?.leave()
+                        }
                     }
                 }
                 
-                self?.dispatchgroup?.enter()
-                writerAudio.requestMediaDataWhenReady(on: self!.writeAudioQueue, using: {
-                    var complete = false
-                    while writerAudio.isReadyForMoreMediaData && !complete {
-                        var sample = readerAudio.copyNextSampleBuffer()
-                        if sample != nil {
-                            let newSample = autoreleasepool(invoking: { () -> CMSampleBuffer? in
-                                return sample
-                            })
-                            writerAudio.append(newSample!)
-                            sample = nil
-                        } else {
-                            writerAudio.markAsFinished()
-                            complete = true
+                if let writerAudio = self?.assetWriterAudioInput,
+                    let readerAudio = self?.assetReaderAudioOutput
+                {
+                    self?.dispatchgroup?.enter()
+                    writerAudio.requestMediaDataWhenReady(on: self!.writeAudioQueue, using: {
+                        var complete = false
+                        while writerAudio.isReadyForMoreMediaData && !complete {
+                            var sample = readerAudio.copyNextSampleBuffer()
+                            if sample != nil {
+                                let time = CMSampleBufferGetPresentationTimeStamp(sample!)
+                                let newSample = autoreleasepool(invoking: { () -> CMSampleBuffer? in
+                                    return self?.delegate?.videoEncoder?(audioBuffer: sample, time: time) ?? sample
+                                })
+                                writerAudio.append(newSample!)
+                                sample = nil
+                            } else {
+                                writerAudio.markAsFinished()
+                                complete = true
+                            }
                         }
-                    }
-                    if complete {
-                        self?.dispatchgroup?.leave()
-                    }
-                })
+                        if complete {
+                            self?.dispatchgroup?.leave()
+                        }
+                    })
+                }
                 
                 self?.dispatchgroup?.notify(queue: self!.processVideoQueue) { [weak self] in
                     
@@ -181,7 +220,6 @@ class LocalVideoEncoder: VideoEncoder {
                     }
                 }
             }
-            
         }
     }
     

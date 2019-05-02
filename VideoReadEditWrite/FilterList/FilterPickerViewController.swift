@@ -185,7 +185,7 @@ extension FilterPickerViewController: VideoEncoderDelegate {
         debugPrint(error)
     }
     
-    func videoEncoder(cvImageBuffer: CVImageBuffer?, imageBufferPool: CVPixelBufferPool?) -> CVImageBuffer? {
+    func videoEncoder(cvImageBuffer: CVImageBuffer?, imageBufferPool: CVPixelBufferPool?, time: CMTime) -> CVImageBuffer? {
         if let filter = filter, let videoPixelBuffer = cvImageBuffer, let bufferPool = imageBufferPool {
             let image = MTIImage(cvPixelBuffer: videoPixelBuffer, alphaType: .alphaIsOne)
             filter.inputImage = image
