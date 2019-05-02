@@ -116,10 +116,6 @@ class MTFilterManager {
         resourceBundle = Bundle(url: url)!
     }
 
-    deinit {
-        debugPrint("deinit VideoFilterPresenterImp")
-    }
-
     func url(forResource name: String) -> URL? {
         return resourceBundle.url(forResource: name, withExtension: nil)
     }

@@ -10,21 +10,21 @@ import UIKit
 import AVFoundation
 
 @objc
-protocol VideoProcessingDelegate: class {
-    @objc optional func videoProcessing(finishedWithError error: Error?)
-    @objc optional func videoProcessing(finishedSuccessfully outputURL: URL)
-    @objc optional func videoProcessing(cvImageBuffer: CVImageBuffer?, imageBufferPool: CVPixelBufferPool?) -> CVImageBuffer?
-    @objc optional func videoProcessing(progress: Float)
+protocol VideoEncoderDelegate: class {
+    @objc optional func videoEncoder(finishedWithError error: Error?)
+    @objc optional func videoEncoder(finishedSuccessfully outputURL: URL)
+    @objc optional func videoEncoder(cvImageBuffer: CVImageBuffer?, imageBufferPool: CVPixelBufferPool?) -> CVImageBuffer?
+    @objc optional func videoEncoder(progress: Float)
 }
 
-protocol VideoProcessing: class {
-    var delegate: VideoProcessingDelegate? { get set }
+protocol VideoEncoder: class {
+    var delegate: VideoEncoderDelegate? { get set }
     
     func prepare(asset: AVAsset, outputUrl: URL)
     func start()
 }
 
-class LocalVideoProcessing: VideoProcessing {
+class LocalVideoEncoder: VideoEncoder {
     
     //reader
     private var assetReader: AVAssetReader?
@@ -54,7 +54,7 @@ class LocalVideoProcessing: VideoProcessing {
     /** Audio and video queue synchronyzer */
     private var dispatchgroup: DispatchGroup?
     
-    weak var delegate: VideoProcessingDelegate?
+    weak var delegate: VideoEncoderDelegate?
     
     init() {}
     
@@ -102,13 +102,13 @@ class LocalVideoProcessing: VideoProcessing {
                             
                             let time = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
                             let progress = CMTimeGetSeconds(time)/CMTimeGetSeconds(duration)
-                            self?.delegate?.videoProcessing?(progress: Float(progress))
+                            self?.delegate?.videoEncoder?(progress: Float(progress))
                             
                             let newSample = autoreleasepool(invoking: { [adaptor = adaptor] () -> (pixelBuffer: CVImageBuffer?, time: CMTime) in
                                 
                                 let imgBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
                                 
-                                if let delegateBuffer = self?.delegate?.videoProcessing?(cvImageBuffer: imgBuffer, imageBufferPool: adaptor.pixelBufferPool) {
+                                if let delegateBuffer = self?.delegate?.videoEncoder?(cvImageBuffer: imgBuffer, imageBufferPool: adaptor.pixelBufferPool) {
                                     return (delegateBuffer, time)
                                 }
                                 
@@ -170,13 +170,13 @@ class LocalVideoProcessing: VideoProcessing {
                         self?.assetWriter?.finishWriting(completionHandler: {
                             if let url = self?.outputUrl {
                                 DispatchQueue.main.async { [weak self] in
-                                    self?.delegate?.videoProcessing?(finishedSuccessfully: url)
+                                    self?.delegate?.videoEncoder?(finishedSuccessfully: url)
                                 }
                             }
                         })
                     } else {
                         DispatchQueue.main.async { [weak self] in
-                            self?.delegate?.videoProcessing?(finishedWithError: error)
+                            self?.delegate?.videoEncoder?(finishedWithError: error)
                         }
                     }
                 }

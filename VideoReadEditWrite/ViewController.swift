@@ -18,14 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var randomFilterAction: UIButton!
     
-    let downloadLink = "video.mp4"
-    var renderView = MTIImageView(frame: .zero)
-    var videoWriter: VideoProcessing? = LocalVideoProcessing()
-    
     var selectedAsset: AVAsset?
-    
-    var filterManager = MTFilterManager()
-    var filter: MTFilter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +29,6 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        view.addSubview(renderView)
-        renderView.frame = CGRect(origin: view.center, size: CGSize(width: 200, height: 200))
-        renderView.center = view.center
     }
     
     func download() {
@@ -93,15 +82,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func applyRandomFilter(_ sender: Any) {
-//        let filterType = MTFilterManager.filters[Int.random(in: 0..<MTFilterManager.filters.count)]
-//        self.filter = filterType.init(manager: self.filterManager)
-//        debugPrint(filterType.name)
         let vc = storyboard?.instantiateViewController(withIdentifier: "FilterPickerViewController") as! FilterPickerViewController
-        self.present(vc, animated: true, completion: nil)
+        vc.asset = self.selectedAsset
+        self.navigationController?.present(vc, animated: true, completion: nil)
     }
     
     @IBAction func reencodeAction(_ sender: Any) {
-        videoWriter?.start()
+        
     }
     
     func makeImagePreview() {
@@ -122,8 +109,6 @@ class ViewController: UIViewController {
                 self.showAlert(text: "there is no dir " + previewImagePath)
             }
         }
-        videoWriter?.delegate = self
-        videoWriter?.prepare(asset: asset, outputUrl: URL(string: FileHelper.newMediaFilePath(extension: "mp4"))!)
     }
 }
 
@@ -137,41 +122,6 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
             picker.dismiss(animated: true, completion: nil)
             makeImagePreview()
         }
-    }
-}
-
-extension ViewController: VideoProcessingDelegate {
-    
-    func videoProcessing(progress: Float) {
-        DispatchQueue.main.async {
-            self.progressView.setProgress(progress, animated: true)
-        }
-    }
-    
-    func videoProcessing(finishedSuccessfully outputURL: URL) {
-        let playerController = AVPlayerViewController()
-        playerController.player = AVPlayer(playerItem: AVPlayerItem(asset: AVAsset(url: outputURL)))
-        playerController.player?.play()
-        self.present(playerController, animated: true, completion: nil)
-    }
-    
-    func videoProcessing(finishedWithError error: Error?) {
-        debugPrint(error)
-    }
-    
-    func videoProcessing(cvImageBuffer: CVImageBuffer?, imageBufferPool: CVPixelBufferPool?) -> CVImageBuffer? {
-        if let filter = filter, let videoPixelBuffer = cvImageBuffer, let bufferPool = imageBufferPool {
-            let image = MTIImage(cvPixelBuffer: videoPixelBuffer, alphaType: .alphaIsOne)
-            filter.inputImage = image
-            if let outputImage = filter.outputImage {
-                var newImgBuffer: CVImageBuffer?
-                CVPixelBufferPoolCreatePixelBuffer(kCFAllocatorDefault, bufferPool, &newImgBuffer)
-                filterManager.image(outputImage, to: newImgBuffer!)
-                return newImgBuffer
-            }
-            return cvImageBuffer
-        }
-        return nil
     }
 }
 

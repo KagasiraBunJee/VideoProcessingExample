@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19BCEA5D227AD91500C47ABC /* VideoEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BCEA5C227AD91500C47ABC /* VideoEncoder.swift */; };
 		1B7873392EBBE95B87629F09 /* Pods_VideoReadEditWriteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A4EAFC4F2ACC16F05230FA /* Pods_VideoReadEditWriteTests.framework */; };
 		651B8F5819C394D54D7985F0 /* Pods_VideoReadEditWrite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140A352A882748868D03622F /* Pods_VideoReadEditWrite.framework */; };
 		852BC1F72270E23F004EEFA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC1F62270E23F004EEFA8 /* AppDelegate.swift */; };
@@ -114,7 +115,6 @@
 		852BC2DD2270E352004EEFA8 /* MTNormalFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC28A2270E351004EEFA8 /* MTNormalFilter.swift */; };
 		852BC2DE2270E352004EEFA8 /* MTXpro2Filter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 852BC28B2270E351004EEFA8 /* MTXpro2Filter.metal */; };
 		852BC2DF2270E352004EEFA8 /* MTRiseFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC28C2270E351004EEFA8 /* MTRiseFilter.swift */; };
-		852BC2E22270E55D004EEFA8 /* VideoProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2E12270E55D004EEFA8 /* VideoProcessing.swift */; };
 		852BC2E42270F548004EEFA8 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2E32270F548004EEFA8 /* FileHelper.swift */; };
 		852BC2ED2276601D004EEFA8 /* FilterPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2EC2276601D004EEFA8 /* FilterPickerViewController.swift */; };
 		852BC2F022766050004EEFA8 /* FIlterPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BC2EF22766050004EEFA8 /* FIlterPickerCell.swift */; };
@@ -132,6 +132,7 @@
 
 /* Begin PBXFileReference section */
 		140A352A882748868D03622F /* Pods_VideoReadEditWrite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoReadEditWrite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19BCEA5C227AD91500C47ABC /* VideoEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoEncoder.swift; sourceTree = "<group>"; };
 		2A68FB8C88BF71E856B32DF1 /* Pods-VideoReadEditWrite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoReadEditWrite.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoReadEditWrite/Pods-VideoReadEditWrite.release.xcconfig"; sourceTree = "<group>"; };
 		852BC1F32270E23F004EEFA8 /* VideoReadEditWrite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoReadEditWrite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		852BC1F62270E23F004EEFA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -243,7 +244,6 @@
 		852BC28A2270E351004EEFA8 /* MTNormalFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTNormalFilter.swift; sourceTree = "<group>"; };
 		852BC28B2270E351004EEFA8 /* MTXpro2Filter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTXpro2Filter.metal; sourceTree = "<group>"; };
 		852BC28C2270E351004EEFA8 /* MTRiseFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRiseFilter.swift; sourceTree = "<group>"; };
-		852BC2E12270E55D004EEFA8 /* VideoProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoProcessing.swift; sourceTree = "<group>"; };
 		852BC2E32270F548004EEFA8 /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
 		852BC2E522710CDB004EEFA8 /* VideoReadEditWrite-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VideoReadEditWrite-Bridging-Header.h"; sourceTree = "<group>"; };
 		852BC2EC2276601D004EEFA8 /* FilterPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPickerViewController.swift; sourceTree = "<group>"; };
@@ -454,7 +454,7 @@
 		852BC2E02270E538004EEFA8 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				852BC2E12270E55D004EEFA8 /* VideoProcessing.swift */,
+				19BCEA5C227AD91500C47ABC /* VideoEncoder.swift */,
 				852BC2E32270F548004EEFA8 /* FileHelper.swift */,
 				852BC2E522710CDB004EEFA8 /* VideoReadEditWrite-Bridging-Header.h */,
 			);
@@ -696,6 +696,7 @@
 				852BC29C2270E352004EEFA8 /* MTPerpetuaFilter.swift in Sources */,
 				852BC22F2270E331004EEFA8 /* MTLuxBlendFilter.swift in Sources */,
 				852BC2902270E352004EEFA8 /* MTJunoFilter.metal in Sources */,
+				19BCEA5D227AD91500C47ABC /* VideoEncoder.swift in Sources */,
 				852BC2A32270E352004EEFA8 /* MTSierraFilter.swift in Sources */,
 				852BC2B72270E352004EEFA8 /* MTLarkFilter.metal in Sources */,
 				852BC2AB2270E352004EEFA8 /* MTSlumberFilter.metal in Sources */,
@@ -744,7 +745,6 @@
 				852BC2A02270E352004EEFA8 /* MTSkylineVideoFilter.metal in Sources */,
 				852BC22A2270E331004EEFA8 /* MTLocalLaplacianFilter.metal in Sources */,
 				852BC2D22270E352004EEFA8 /* MTValenciaFilter.metal in Sources */,
-				852BC2E22270E55D004EEFA8 /* VideoProcessing.swift in Sources */,
 				852BC2A12270E352004EEFA8 /* MTCharmesVideoFilter.metal in Sources */,
 				852BC2D32270E352004EEFA8 /* MTAshbyVideoFilter.swift in Sources */,
 				852BC2B22270E352004EEFA8 /* MTNashvilleFilter.swift in Sources */,
